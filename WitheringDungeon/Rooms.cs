@@ -9,7 +9,10 @@ public static class Rooms
             switch(GameFunctions.CheckOption(GameOptions.RoomOneNav))
             {
                 case 0://open menu
-                Console.WriteLine("Havent reworked the menu yet");
+                    if (!GameFunctions.Menu())
+                    {
+                        return false;
+                    }
                 break;
                 case 1://Alcove
                     GameFunctions.Dialogue(RoomOne.AlcoveDescription);
@@ -50,6 +53,7 @@ public static class Rooms
                                     {
                                         GameFunctions.Dialogue(RoomOne.RingGet);
                                         Characters.player.Mana+=5;
+                                        GameOptions.MenuOptions[2]="2. SpellBook";
                                         GameOptions.ChestItemOptions[3]="-";
                                     }
                                     break;
@@ -107,5 +111,9 @@ public static class Rooms
         }
         return true;
     }
-    
+    public static bool Two()
+    {
+
+        return true;
+    }
 }

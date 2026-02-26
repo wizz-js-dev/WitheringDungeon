@@ -19,10 +19,10 @@ public static class Spells
 }
 public static class Weapons
 {
-    public static Weapon FeatherFlight { get; } = new Weapon("Featherflight Bow", 5, "ranged", "You reach into the quiver on your back, retrieving and then nocking an arrow on the mighty bow. You empty your mind, draw back the string, take aim and release, watching the arrow fly through the air. The Sharp tip hits its target");
-    public static Weapon SerpentsFang { get; } = new Weapon("Serpents Fang", 9, "piercing", "Mighty sword in hand, you rush forward raising the blade high above your head. You bring the sharp edge down with great force against the flesh of your opponent");
-    public static Weapon BrokenShield { get; } = new Weapon("Broken Shield", 5, "shield", "You hold up the broken shield and brace yourself for the next attack. +5 defence");
-    public static Weapon TwistedLimb { get; } = new Weapon("Twisted Limb", 7, "physical", "From the sea of shadow encircling the creature, a long, twisted limb raises high above its body and shoots forward, striking you and knocking you back");
+    public static Weapon FeatherFlight { get; } = new Weapon("Featherflight Bow","A large, wooden bow with roots carved into it. and a leather quiver of arrows", 5, "ranged", "You reach into the quiver on your back, retrieving and then nocking an arrow on the mighty bow. You empty your mind, draw back the string, take aim and release, watching the arrow fly through the air. The Sharp tip hits its target");
+    public static Weapon SerpentsFang { get; } = new Weapon("Serpents Fang","A large, bright red broad sword with an ornately molded hilt and ruby in the pommel", 9, "piercing", "Mighty sword in hand, you rush forward raising the blade high above your head. You bring the sharp edge down with great force against the flesh of your opponent");
+    public static Weapon BrokenShield { get; } = new Weapon("Broken Shield","An old, nearly broken wooden shield", 5, "shield", "You hold up the broken shield and brace yourself for the next attack. +5 defence");
+    public static Weapon TwistedLimb { get; } = new Weapon("Twisted Limb","The gnarled limb of the vicious WIthering Shade", 7, "physical", "From the sea of shadow encircling the creature, a long, twisted limb raises high above its body and shoots forward, striking you and knocking you back");
 }
 public static class Characters
 {
@@ -117,10 +117,64 @@ public static class GameFunctions
             Console.ReadLine();
         }
     }
-
+    public static bool Menu()
+    {
+        bool inMenu=true;
+        while (inMenu)
+        {
+            switch (GameFunctions.CheckOption(GameOptions.MenuOptions))
+            {
+                case 0://Inventory
+                foreach(Item item in Characters.player.Inventory)
+                    {
+                        Console.WriteLine($"{item.Name}: {item.Description}{Environment.NewLine}");
+                    }
+                break;
+                case 1://Weapons
+                    if (Characters.player.Equipped.Count > 0)
+                    {
+                        foreach(Weapon weapon in Characters.player.Equipped)
+                        {
+                            Console.WriteLine($"{weapon.Name}: {weapon.Description}{Environment.NewLine}. Damage: {weapon.Damage} | Type: {weapon.Type}{Environment.NewLine}");
+                        }
+                    }
+                break;
+                case 2://SpellBook
+                    if (Characters.player.SpellBook.Count > 0)
+                    {
+                        foreach(Spell spell in Characters.player.SpellBook)
+                        {
+                            Console.WriteLine($"{spell.Name}:{Environment.NewLine}Damage: {spell.Damage}|Mana Cost: {spell.Mana} | Type: {spell.Type}");
+                        }
+                    }
+                break;
+                
+                case 3://Stats and Progress
+                Console.WriteLine($"Attack: {Characters.player.Attack} | Defence: {Characters.player.Defence} | Speed {Characters.player.Speed} | Health: {Characters.player.Health}{Environment.NewLine}Scrolls Collected: {Characters.player.Scrolls} out of 5");
+                break;
+                case 4://History
+                case 5://Leave Menu
+                inMenu=false;
+                return true;
+                case 6://Quit Game
+                return false;
+            }
+        }
+        return true;
+    }
 }
 public static class GameOptions
     {
+        public static string[] MenuOptions = new string[]
+        {
+            "0. Inventory",
+            "1. Weapons",
+            "2. Locked",
+            "3. Stats and Progress",
+            "4. History",
+            "5. Leave Menu",
+            "6. Quit Game"
+        };
         public static string[] TakeScrollOne = new string[]
         {
             "0. Take Scroll","1. Leave it"

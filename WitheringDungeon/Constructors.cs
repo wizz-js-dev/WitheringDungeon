@@ -22,13 +22,15 @@ public class Spell
 public class Weapon
 {
     public string Name { get; set; }
+    public string Description{get;set;}
     public int Damage { get; set; }
     public string Type { get; set; }
     public string Sequence { get; set; }
 
-    public Weapon(string name, int damage, string type, string sequence)
+    public Weapon(string name,string descr, int damage, string type, string sequence)
     {
         Name = name;
+        Description=descr;
         Damage = damage;
         Type = type;
         Sequence = sequence;
@@ -76,6 +78,7 @@ public class Character
     public List<Spell> SpellBook { get; private set; }
     public List<Item> Inventory { get; private set; }
     public List<Weapon> Equipped { get; private set; }
+    public int Scrolls{get;set;}
     //need history list
     //also some sort of scrolls progress tracker that can be displayed from menu??
 
@@ -90,6 +93,7 @@ public class Character
         Health = health;
         Weakness = weak;
         Evasiveness = 0;
+        Scrolls=0;
         SpellBook = new List<Spell>();
         Inventory = new List<Item>();
         Equipped = new List<Weapon>();

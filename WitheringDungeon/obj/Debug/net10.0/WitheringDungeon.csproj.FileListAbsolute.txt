@@ -1,0 +1,45 @@
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.GeneratedMSBuildEditorConfig.editorconfig
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.AssemblyInfoInputs.cache
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.AssemblyInfo.cs
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.csproj.CoreCompileInputs.cache
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.exe
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.deps.json
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.runtimeconfig.json
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.dll
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.pdb
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.dll
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/refint/WitheringDungeon.dll
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.pdb
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.genruntimeconfig.cache
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/ref/WitheringDungeon.dll
+E:/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.sourcelink.json
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.deps.json
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.runtimeconfig.json
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.dll
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/bin/Debug/net10.0/WitheringDungeon.pdb
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.GeneratedMSBuildEditorConfig.editorconfig
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.AssemblyInfoInputs.cache
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.AssemblyInfo.cs
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.csproj.CoreCompileInputs.cache
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.sourcelink.json
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.dll
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/refint/WitheringDungeon.dll
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.pdb
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/WitheringDungeon.genruntimeconfig.cache
+/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/WitheringDungeon/obj/Debug/net10.0/ref/WitheringDungeon.dll
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.exe
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.deps.json
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.runtimeconfig.json
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.dll
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.pdb
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.AssemblyInfoInputs.cache
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.AssemblyInfo.cs
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.csproj.CoreCompileInputs.cache
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.sourcelink.json
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.dll
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\refint\WitheringDungeon.dll
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.pdb
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.genruntimeconfig.cache
+E:\Programming\Bootcamp\week_6\day_4\RPG Console App\WitheringDungeon\obj\Debug\net10.0\ref\WitheringDungeon.dll

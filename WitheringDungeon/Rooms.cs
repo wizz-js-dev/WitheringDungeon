@@ -2,9 +2,9 @@ public static class Rooms
 {
     public static bool One()
     {
-        bool roomOptions = true;
+        bool navigation = true;
         GameFunctions.Dialogue(RoomOne.Description);
-        while(roomOptions)
+        while(navigation)
         {           
             switch(GameFunctions.CheckOption(GameOptions.RoomOneNav))
             {
@@ -65,7 +65,35 @@ public static class Rooms
                     }
                     break;
                 case 2://Green Door
-                    GameFunctions.Dialogue(RoomOne.GreenDoor);
+                    if (Characters.player.Inventory.Contains(Items.AncientRoot))
+                    {
+                        GameFunctions.Dialogue(RoomOne.NoticeRecess);
+                        int nA = GameFunctions.CheckOption(GameOptions.InvestigateRecess);
+                        GameFunctions.Dialogue(RoomOne.InvestigateRecess);
+                        bool foundScroll = false;
+                        while (!foundScroll)
+                        {
+                            if (GameFunctions.CheckOption(GameOptions.InvestigateMushroom) == 0)
+                        {
+                            GameFunctions.Dialogue(RoomOne.TryTouchWisp);
+                        }
+                            else
+                            {
+                                GameFunctions.Dialogue(RoomOne.UnderMushroom);
+                                nA=GameFunctions.CheckOption(GameOptions.TakeScrollTwo);
+                                GameFunctions.Dialogue(Scrolls.Two);
+                                Console.WriteLine($"SCROLLS: {Characters.player.NewScroll()} of 5 collected!");
+                                foundScroll=true;
+                            }
+                        }
+                        GameFunctions.Dialogue(RoomOne.Whispers);
+                        nA=GameFunctions.CheckOption(GameOptions.CreepToDoor);
+                        GameFunctions.Dialogue(RoomOne.ToDoorFinal);                        
+                    }
+                    else
+                    {
+                        GameFunctions.Dialogue(RoomOne.GreenDoor);
+                    }
                     if (GameFunctions.CheckOption(GameOptions.TryDoor) == 0)
                     {
                         GameFunctions.Dialogue(RoomOne.TryOpenDoor);
@@ -73,7 +101,8 @@ public static class Rooms
                         {
                             int nA = GameFunctions.CheckOption(GameOptions.UseRoot);
                             GameFunctions.Dialogue(RoomOne.OpenDoor);
-                            roomOptions=false;
+                            GameFunctions.Dialogue(RoomOne.NextRoom);
+                            navigation=false;
                             return true;
                         }
                     }
@@ -113,7 +142,29 @@ public static class Rooms
     }
     public static bool Two()
     {
-
+        GameFunctions.Dialogue(RoomTwo.EnterGreen);
+        bool navigation = true;
+        while (navigation)
+        {
+            GameFunctions.Dialogue(RoomTwo.Description);
+            switch (GameFunctions.CheckOption(GameOptions.RoomTwoNav))
+            {
+                case 0://Menu
+                    if (!GameFunctions.Menu())
+                        {
+                            return false;
+                        }
+                break;
+                case 1://Roots
+                GameFunctions.Dialogue(RoomTwo.Roots);
+                //choice to attempt climb
+                //call climbing puzzle function
+                break;
+                case 2://Red Door
+                //same as last room. If have gem,open if not struggle
+                break;
+            }
+        }
         return true;
     }
 }

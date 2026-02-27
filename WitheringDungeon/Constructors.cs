@@ -139,6 +139,11 @@ public class Character
         SpellBook.Add(spell);
         Console.WriteLine($"~~You learned the spell {spell}");
     }
+    public int NewScroll()
+    {
+        Scrolls++;
+        return Scrolls;
+    }
     public void StatAssign(TextReader reader)
     {
         int restoreValue=AttributePoints;

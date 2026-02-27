@@ -33,7 +33,7 @@ public static class RoomOne
         "There are small pools of water strewn accross the uneven stone floor and the air smells rancid like mold and putrid meat",
         "Covering most of the walls and floor is a thick tangle of dark moss, from which sprout glowing mushrooms",
         "Looking up, you see several magical wisps of energy, dancing through the air, glowing icy blue. Above them, you cannot see the ceiling of the room",
-        "Glinting in their light is a thick dust like haze which fills the room",
+        "Glinting in their light is a thick dusty haze which fills air in the whole room",
         "To your left, you can make out a small alcove in the wall. Every so often, something seems to catch the light of the entities above",
         "There is a large GREEN metal door breaking the jagged round walls straight accross from you.It appears to have an image etched on to its surface, however you can't make out what it depicts",
         "In the centre of the room is a circular stone plinth, atop which sits a shallow stone bowl holding some sort of liquid, occasionally reflecting the glow from above"
@@ -41,6 +41,54 @@ public static class RoomOne
     public static List<string> GreenDoor = new List<string>
     {
         "You cross the dark room, damp room weaving between the sprouting mushrooms and stagnant puddles, until you're standing before the Green Metal Door",
+        "Around the door the stone has been carved into a frame of gnarled root, tangled up in each other",
+        "The face of the door is etched with an image of a great tree. From its trunk, leafless branches spread up and out and symetrical twisted roots wind down the door",
+        "There is no handle"
+    };
+    public static List<string> NoticeRecess = new List<string>
+    {
+        "You cross the dark room, damp room weaving between the sprouting mushrooms and stagnant puddles, when something catches your eye",
+        "Tucked into the bottom of the mossy wall in a corner of the room you haven't yet investigated, you spy a carved out recess previously shrouded in shadow",
+        "Now however a flickering blue light emanates out into the room, which is how you noticed it",
+        "Curious"
+    };
+    public static List<string> InvestigateRecess = new List<string>
+    {
+        "You make your way over to the glowing opening and crouch down to peer inside, sweeping back a curtain of draped moss",
+        "Inside you find a large, mushroom somehow sprouting from the lifeless stone of the chamber floor",
+        "Its cap is the deep blue of the dusk sky covered in splotches of bright, vibrant white",
+        "From the edges of its colourful cap, gills drape like lace to to the ground, concealing most of its stem",
+        "Atop the mushroom, you discover the source of the light, which drew you over -",
+        "A single blue wisp bounces playfully up and down across its surface, sending sparks of magical light dancing across the smooth cap on each landing",
+        "The sight brings a smile to your face"
+    };
+    public static List<string> TryTouchWisp = new List<string>
+    {
+        "You reach a tentative hand into the small hollow and try to touch the small curious entity",
+        "As you fingers draw near, the wisp changes direction and lands its next bounce on the back of your hand",
+        "It feels like the lick of a flame, but with only a gentle warmth",
+        "It immediately bounces off and back to the mushroom below, continuing its whimsical bobbing"
+    };
+    public static List<string> UnderMushroom = new List<string>
+    {
+        "Hesitantly, you reach out and sweep the living filigree of the blooming mold aside",
+        "The movement sends a scatter of tiny glittering specks floating out into the air",
+        "Revealed beneath is a an impossible dark stem, so void of colour and light like a hole in the world",
+        "You see the corner of something pocking out from behind the strange emptiness"
+    };
+    public static List<string> Whispers = new List<string>
+    {
+        "You stand up from the small alcove and turn back to the room",
+        "The light emanating from above has dimmed and you look up to see the floating wisps are no longer there",
+        "The only light in the room now comes from the spread of glowing fungus",
+        "As if from the very walls, a sound like whispers meets your ear",
+        "It sounds like a huge crowd of people, calling to you under their breath",
+        "You are filled with a sense of unease"
+    };
+    public static List<string> ToDoorFinal = new List<string>
+    {
+        "You quietly creep over towards the GREEN metal door, feeling as if you are being watched",
+        "You come to stand before the door and look upon it",
         "Around the door the stone has been carved into a frame of gnarled root, tangled up in each other",
         "The face of the door is etched with an image of a great tree. From its trunk, leafless branches spread up and out and symetrical twisted roots wind down the door",
         "There is no handle"
@@ -144,9 +192,31 @@ public static class RoomOne
         "A sense of discomfort rises in you when you look at the latter",
         "You place both in your pack"
     };
+    
 }
 public static class RoomTwo
 {
+    public static List<string> EnterGreen = new List<string>
+        {
+            "You make your way down the dark corridor, hearing only the tap of your boots on the stone floor",
+            "The sound changes to a soft crunch as you start to make out a soft green glow up ahead",
+            "You get closer and see a doorway ahead leading into a gently lit chamber",
+            "You walk through the door to find yourself in a large chamber, bigger than the last"
+        };
+        public static List<string> Description = new List<string>
+        {
+            "The floor is covered in a thick, almost bouncy layer of moss and ancient rotten wood",
+            "From the walls all around, thick twisted roots reach out and cross the room",
+            "Accross from you, through the wooden web, you see a large RED door set into the wall"
+        };
+        public static List<string> Roots = new List<string>
+        {
+            "You step out into the room and look towards the impossibly high ceiling",
+            "You look up to see the roots have broken through into the chamber all the way up to the distant ceiling",
+            "Dancing and weaving in between the roots, are playful green wisps of light similar to those in the last room",
+            "From where you stand you can just about make out a ledge far above you",
+            "You may be able to use the roots to climb up there"
+        };
 
 }
 public static class RoomThree
@@ -184,13 +254,41 @@ public static class Scrolls
             "--Unbeknownst to us, the Twisted Kight left our dark forest and layed siege to the neighboring kingdom of Devarr",
             "--There were no survivors",
             "--When word of the slaughter reached the Tash'Kar Capital, we were horrified and set about preventing any further death at the dark knights hand...",
+            "",
             "The story fills you with a great feeling of pain and regret",
-            "You place the scroll in your pack and look to the great warrior on the stone door",
-            "SCROLLS: 1 of 5 collected"
+            "You place the scroll in your pack and look to the great warrior on the stone door"//a subtle hint to the writer: Agvenar
     };
     public static List<string> Two { get; } = new List<string>
     {
-
+        "You retrieve the item, being careful not to touch the shadowy stem and find it is a scroll",
+        "You open the scroll to find sharp pointed lettering spreading across its surface. It reads:",
+        "- The war rages on as it has for decades and my people are dying",
+        "- No matter how much we cry for peace, the nations of the land respon only with brutality and death",
+        "- Great fear lives within me for the safety of my family. For the safety of all Tash'Kar families",
+        "- There must be some way to end the bloodshed before all our kingdoms lie in ruin",
+        "- ",
+        "- I have come here to the temple, against the wishes of my shadowties, on rumour of some plan to bring the fighting to an end",
+        "- Though the Master of Rituals may protest, as Shadowmaster I take no orders except from the Elders",
+        "- Though this reluctance may come from a place of care, I must lend my aid to my people and if the answer is here, then by the Void, so must I be",
+        "- ",
+        "- I have heard the 'great plan'..",
+        "- It is a bold venture, thought up by the Master of Sorcery here at the great temple. Bold, but with a cost",
+        "- In Tash'Kar history, nothing like this has ever been attempted",
+        "- A great sacrifice is required. One life to save many..",
+        "- A life left behind, all family forsaken,never the same again, to champion the fight against our enemies",
+        "- How could we possibly ask someone to pay this price?",
+        "- No one would willingly accept the Twisted fate required of them, no matter how much strength or power it came with",
+        "- ",
+        "- I will not stand idly by and let any Tash'Kar be chosen at random to take on the mantle of 'saviour'",
+        "- No matter how much those around me protest, it is I who shall give my life for my people",
+        "- This war must end. The suffering must cease. And if I must give up my very existence to see that come about, then so be it",
+        "- I go now, to the ritual chamber below to face my fate",
+        "- To my family, I do this for your safety",
+        "- I do this, willingly, for all Tash'Kar",
+        "--- Lord Tokk..",
+        "",
+        "The ink is smudged and you cannot make out the signature at the bottom of the scroll",
+        "As you place the scroll in your pack, you hear something coming from behind you"
     };
     public static List<string> Three { get; } = new List<string>
     {

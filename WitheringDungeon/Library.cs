@@ -224,4 +224,29 @@ public static class GameOptions
         {
             "0. Reach in and grab the items"
         };
+        public static string[] InvestigateRecess = new string[]
+        {
+            "0. Go over and investigate"
+        };
+        public static string[] InvestigateMushroom = new string[]
+        {
+            "0. Try to touch wisp",
+            "1. Look under mushroom cap"
+        };
+        public static string[] TakeScrollTwo = new string[]
+        {
+            "0. Take the item"
+        };
+        public static string[] CreepToDoor = new string[]
+        {
+            "0. Get to the GREEN door"
+        };
+        //Room Two Options
+
+        public static string[] RoomTwoNav = new string[]
+        {
+            "0. Menu",
+            "1. Investigate Roots",
+            "2. Head over to RED door"
+        };
     }

@@ -16,6 +16,7 @@ class Program
         if (GameFunctions.CheckOption(GameOptions.TakeScrollOne) == 0)
         {
             GameFunctions.Dialogue(Scrolls.One);
+            Console.WriteLine($"SCROLLS: {Characters.player.NewScroll()} out of 5 collected");
         }
         //Go through door or run away
         if (GameFunctions.CheckOption(GameOptions.EnterDungeon)!=0)
@@ -23,22 +24,16 @@ class Program
             GameFunctions.Dialogue(Intro.Escape);
         }
         else
-        {
+        {//All gameplay happens in here
             //Enter room 1
-            //Do i still use separate methods for each room? yes
             //return bool, if true next room if false end game
             bool gamePlay=true;
             while (gamePlay)
             {
                 gamePlay=Rooms.One();
-                if (gamePlay)
-                {
-                    Console.WriteLine("You move to the next room. Thats all ive done so far");
-                    gamePlay=false;
-                }
-                //if(gamePlay){gamePlay=RoomTwo};
-                //if(gamePlay){gamePlay=RoomThree};
-                //if(gamePlay){gamePlay=WitheringDungeon};
+                if(gamePlay){gamePlay=Rooms.Two();};
+                //if(gamePlay){gamePlay=Rooms.Three();};
+                //if(gamePlay){gamePlay=Rooms.WitheringDungeon();};
             }
         }
         

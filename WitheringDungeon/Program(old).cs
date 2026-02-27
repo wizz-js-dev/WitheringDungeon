@@ -1014,7 +1014,7 @@
 //             "--I wish they could be with me now as I face my biggest challenge. The biggest challenge in the history of our people",
 //             "--I keep telling myself I will be able to rejoin them once we have succeeded here, but none of us can be sure that this will work",
 //             "--If this doesnt work, and I do not survive this day, and in the off chance someone, someday reads what I right here:",
-//             "--I am Lord Agvenar, Master of Rituals here at the temple of Shadowstone",
+//             "--I am Lord Agvenar, Master of Rituals and Sorcery here at the temple of Shadowstone",
 //             "--My heart, is The Heart of a Sorceror and it belongs in whole to my people, the mighty and wonderful Tash'Kar",
 //             "--I share my existence - mind, body and soul - with Lord Tokkshir, warrior of the Featherflight army, lover of trees",
 //             "--We two shared our life with the now departed Lord Kra-naer, Shadowmaster of the Forests, who gave their life to defend our people in the war",

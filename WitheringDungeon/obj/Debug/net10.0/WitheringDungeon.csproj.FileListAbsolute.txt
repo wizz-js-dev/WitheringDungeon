@@ -58,3 +58,18 @@ E:\Programming\Bootcamp\week_6\day_4\RPG Console App\RPGConsoleApp\WitheringDung
 E:\Programming\Bootcamp\week_6\day_4\RPG Console App\RPGConsoleApp\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.pdb
 E:\Programming\Bootcamp\week_6\day_4\RPG Console App\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.genruntimeconfig.cache
 E:\Programming\Bootcamp\week_6\day_4\RPG Console App\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\ref\WitheringDungeon.dll
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.exe
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.deps.json
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.runtimeconfig.json
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.dll
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\bin\Debug\net10.0\WitheringDungeon.pdb
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.AssemblyInfoInputs.cache
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.AssemblyInfo.cs
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.csproj.CoreCompileInputs.cache
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.sourcelink.json
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.dll
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\refint\WitheringDungeon.dll
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.pdb
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\WitheringDungeon.genruntimeconfig.cache
+E:\Programming\Bootcamp\week_6\day_4\RPGConsoleApp\WitheringDungeon\obj\Debug\net10.0\ref\WitheringDungeon.dll

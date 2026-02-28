@@ -36,6 +36,7 @@ public static class Items
     public static Item AncientRoot = new Item("Ancient Root","A small, piece of the root of some ancient tree. Petrified Moss clings to its surface");
     public static Item TwistedBlackShardOne = new Item("Twisted Black Metal Shard(1)","A sharp, gnarled piece of cold black metal. It makes you uncomfortable to look at it");
     public static Item TwistedBlackShardTwo = new Item("Twisted Black Metal Shard(2)","A sharp, gnarled piece of cold black metal. It seems to be repelled by the other shard in your pack");
+    public static Item FieryGemstone = new Item("Fiery Gemstone","A large roung ruby that looks like it has flames licking at its surface from within");
 }
 
 public static class GameFunctions
@@ -249,4 +250,20 @@ public static class GameOptions
             "1. Investigate Roots",
             "2. Head over to RED door"
         };
+        public static string[] ClimbRoots = new string[]
+        {
+            "0. Attempt to climb roots",
+            "1. Look Elsewhere"
+        };
+        public static string[] JumpingChoices = new string[]
+        {
+            "0. Jump Left",
+            "1 Jump Right"
+        };
+        public static string[] Jump = new string[]
+        {
+            "0. Jump"
+        };
+        //climb down option
+        //search satchel
     }

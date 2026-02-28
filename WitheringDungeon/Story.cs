@@ -212,12 +212,101 @@ public static class RoomTwo
         public static List<string> Roots = new List<string>
         {
             "You step out into the room and look towards the impossibly high ceiling",
-            "You look up to see the roots have broken through into the chamber all the way up to the distant ceiling",
+            "You look up to see the roots have broken through into the chamber all the way up the room",
             "Dancing and weaving in between the roots, are playful green wisps of light similar to those in the last room",
             "From where you stand you can just about make out a ledge far above you",
             "You may be able to use the roots to climb up there"
         };
+        public static List<string> BeginClimb = new List<string>
+        {
+            "You step up the the closest root and press your weight against it to find it gives only slightly",
+            "Carefully you climb on to the ancient wood and look up through the tangle of roots",
+            "Its a long way up" ,
+            "You look around to see there are to roots within jumping range of the one on which you stand",
+            "One to the LEFT and another to the RIGHT"
+        };
+        public static List<string> JumpSuccess = new List<string>
+        {
+            "You launch yourself towards the root and manage to firmly grab hold of it",
+            "You scramble yourself up on to it and look around for where to go next"
+        };
+        public static List<string> JumpSuccessButNextFail = new List<string>
+        {
+            "You jump towards the root and at the last minute, manage to catch it in your hands",
+            "You lift your body and wrap your legs around the wood before hoisting yourself round and stand up",
+            "You look around to see only one choice for your next jump"
+        };
+        public static List<string> JumpFail = new List<string>
+        {
+            "You leap forward to the root and wrap your hands around it",
+            "As you try to lift yourself up on to it, you find the top is covered in a slimy layer of lychen",
+            "You try to grip on however your hands slip and you fall in to the open air below you",
+            "You tumble down and your fall is broken by the thick moss on the chamber floor",
+            "You make your way over to the first root and climb back on, determined to try again"
+        };
+            //Maybe take small amount of damage and if hp gets to 0 you fail the whole dungeon
+        public static List<string> JumpFailStage2 = new List<string>
+        {
+            "You leap forward to the root and wrap your hands around it",
+            "As you try to lift yourself up on to it, you find the top is covered in a slimy layer of lychen",
+            "You try to grip on however your hands slip and you fall in to the open air below you",
+            "You tumble downwards but manage to catch hold of the small ledge to stop your fall",
+            "You hoist yourself up and make your way along the ledge to the end where the two roots are, determined to try again"
+        };
+        public static List<string> NextIsLedge = new List<string>
+        {
+            "From where you stand you see that the ledge you saw earlier is within reach"
+        };
+        public static List<string> JumpToLedge = new List<string>
+        {
+            "You jump forward to the Ledge and your boots land on solid stone",
+            "The ledge is narrow with only enough space for you and a large bundle of fabric to your left",
+            "You lean down and pick up the strange item to find there is something wrapped within the old tattered cloth",
+            "You pull the wrapping away to reveal a suspiciously well preserved wooden bow and a leather quiver of arrows",
+            "Carved into the body of the bow you read the weapons name",
+            "~~Featherflight~~",
+            "You swing the quiver over your shoulder and he bow across your back and turn look out to the room of roots",
+            "From your vantage point you see that the root platforms extend even higher up the room",
+            "Near the ceiling you spy another stone outcropping which you can reach by climbing",
+            "You shuffle along the small ledge to the end where there are two roots you could possibly jump to to make your way upwards"
+        };
+        public static List<string> ToSecondLedge = new List<string>
+        {
+            "You jump to the left root and as you are about to land on it, it vanishes revealing the large ledge",
+            "You land hard on the stone and roll forward, coming to a stop against the chamber wall",
+            "You stand up and dust yourself off, looking around",
+            "You spot a small wooden chest tucked between the broken stones where the wall meets the platform and make your way towards it",
+            "As you get closer, you hear chilling whispers coming from somewhere below you",
+            "You peak over the edge of the outcropping to find the chamber below you still empty of anything alive",
+            "Warily you head to the chest trying to ignore the haunting voices",
+            "You pull the chest free from where sits and lift the lid to reveal a Bright Red gemstone, sitting inside, next to another 'Twisted Black Metal Shard",
+            "The Red Gemstone seems to catch the light from the room and reflect it like flames burning within",
+            "You reach in to retrieve the contents and as your hands touch the cold metal of the Twisted Shard, the disembodied whispers stop leaving an empty cold silence to fill the room",
+            "You put the key and shard in your pack",
+            "You look around for anything else but find nothing, so set about climbing back down to the chamber floor"
+        };
+        public static List<string> LeaveSecondLedge = new List<string>
+        {
+            //Look around for a way down
+            //Find a root stretching most of the way, youll have to jump the rest
 
+        };
+        public static List<string> ClimbDown = new List<string>
+        {
+            //Start climb down, halfway discover leather satchel hanging off of root 
+        };
+        public static List<string> LeatherSatchel = new List<string>
+        {
+            //look inside. Broken something and SCROLL THREE(write that too)
+        };
+        public static List<string> ContinueDown = new List<string>
+        {
+            //climb down, root ends, jump rest of way
+        };
+        public static List<string> AlreadyClimbed = new List<string>
+        {
+            //you go to climb up the roots but decide against it after so many falls
+        };
 }
 public static class RoomThree
 {

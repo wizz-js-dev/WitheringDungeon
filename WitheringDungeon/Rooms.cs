@@ -100,6 +100,7 @@ public static class Rooms
                         if (Characters.player.Inventory.Contains(Items.AncientRoot))
                         {
                             int nA = GameFunctions.CheckOption(GameOptions.UseRoot);
+                            Characters.player.Use(Items.AncientRoot);
                             GameFunctions.Dialogue(RoomOne.OpenDoor);
                             GameFunctions.Dialogue(RoomOne.NextRoom);
                             navigation=false;
@@ -157,11 +158,22 @@ public static class Rooms
                 break;
                 case 1://Roots
                 GameFunctions.Dialogue(RoomTwo.Roots);
-                //choice to attempt climb
-                //call climbing puzzle function
+                    if (GameFunctions.CheckOption(GameOptions.ClimbRoots) == 0)
+                    {
+                        if (!Characters.player.Inventory.Contains(Items.FieryGemstone))
+                        {
+                            Puzzles.RootJumping();
+                        }
+                        else
+                        {
+                            //already climbed dialogue option
+                        }
+                        
+                    }
                 break;
                 case 2://Red Door
-                //same as last room. If have gem,open if not struggle
+                //Originally in room one in program(old)
+                //same as last room. If have gem open, if not struggle
                 break;
             }
         }

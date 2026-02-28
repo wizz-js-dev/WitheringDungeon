@@ -129,10 +129,14 @@ public class Character
         Inventory.Add(item);
         Console.WriteLine($"~~You added 1 {item.Name} to your pack");
     }
+    public void Use(Item item)
+    {
+        Inventory.Remove(item);
+    }
     public void Equip(Weapon weapon)
     {
         Equipped.Add(weapon);
-        Console.WriteLine($"~~You equiped 1 {weapon}");
+        Console.WriteLine($"~~You equipped {weapon.Name}");
     }
     public void Learn(Spell spell)
     {

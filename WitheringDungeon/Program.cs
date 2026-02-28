@@ -3,7 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(Characters.player.SpellBook.Count);
+        Puzzles.RootJumping();
         //Gets player data and assigns to character object
         Console.WriteLine("Greetings adventurer! Prey tell, what is your name?");
         Characters.player.Name=Console.ReadLine();

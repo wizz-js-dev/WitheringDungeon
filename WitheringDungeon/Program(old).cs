@@ -615,51 +615,51 @@
 //             "You make your way over to the first root and climb back on, determined to try again"
 //             //Maybe take small amount of damage and if hp gets to 0 you fail the whole dungeon
 //         };
-//         List<string> jumpFailStage2 = new List<string>
-//         {
-//             "You leap forward to the root and wrap your hands around it",
-//             "As you try to lift yourself up on to it, you find the top is covered in a slimy layer of lychen",
-//             "You try to grip on however your hands slip and you fall in to the open air below you",
-//             "You tumble downwards but manage to catch hold of the small ledge to stop your fall",
-//             "You make your way along the ledge to the end where the two roots are, determined to try again"
-//             //Maybe take small amount of damage and if hp gets to 0 you fail the whole dungeon
-//         };
-//         List<string> NextIsLedge = new List<string>
-//         {
-//             "From where you stand you see that the ledge you saw earlier is within reach",
-//             "What do you do?",
-//             "1. JUMP"
-//         };
-//         List<string> jumpToLedge = new List<string>
-//         {
-//             "You jump forward to the Ledge and your boots land on solid stone",
-//             "The ledge is narrow with only enough space for you and a large bundle of fabric to your left",
-//             "You lean down and pick up the strange item to find there is something wrapped within the old tattered cloth",
-//             "You pull the wrapping away to reveal a suspiciously well preserved wooden bow and a leather quiver of arrows",
-//             "Carved into the body of the bow you read the weapons name",
-//             "~~Featherflight~~",
-//             "You swing the quiver over your shoulder and he bow across your back and turn look out to the room of roots",
-//             "EQUIPPED: 'Featherflight Bow",
-//             "From your vantage point you see that the root platforms extend even higher up the room",
-//             "Near the ceiling you spy another stone outcropping which you can reach by climbing",
-//             "You shuffle along the small ledge to the end where there are two roots you could possibly jump to to make your way upwards"
-//         };
-//         List<string> toSecondLedge = new List<string>
-//         {
-//             "You jump to the left root and as you are about to land on it, it vanishes revealing the large ledge",
-//             "You land hard on the stone and roll forward, soming to a stop against the chamber wall",
-//             "You stand up and dust yourself off, looking around",
-//             "You spot a small wooden chest tucked between the broken stones where the wall meets the platform and make your way towards it",
-//             "As you get closer, you hear chilling whispers coming from somewhere below you",
-//             "You peak over the edge of the outcropping to find the chamber below you still empty of anything alive",
-//             "Warily you head to the chest trying to ignore the haunting voices",
-//             "You pull the chest free from where sits and lift the lid to reveal a 'Plain Black Key' sitting inside, next to a 'Twisted Black Metal Shard",
-//             "You reach in to retrieve the contents and as your hands touch the cold metal of the Twisted sShard, the disembodied whispers stop leaving an empty cold silence to fill the room",
-//             "You put the key and shard in your pack",
-//             "INVENTORY: Added 'Plain Black Key'",
-//             "INVENTORY: Added 'Twisted Black Metal Shard'",
-//             "You look around for anything else but find nothing, so set about climbing back down to the chamber floor"
-//         };
+        // List<string> jumpFailStage2 = new List<string>
+        // {
+        //     "You leap forward to the root and wrap your hands around it",
+        //     "As you try to lift yourself up on to it, you find the top is covered in a slimy layer of lychen",
+        //     "You try to grip on however your hands slip and you fall in to the open air below you",
+        //     "You tumble downwards but manage to catch hold of the small ledge to stop your fall",
+        //     "You make your way along the ledge to the end where the two roots are, determined to try again"
+        //     //Maybe take small amount of damage and if hp gets to 0 you fail the whole dungeon
+        // };
+        // List<string> NextIsLedge = new List<string>
+        // {
+        //     "From where you stand you see that the ledge you saw earlier is within reach",
+        //     "What do you do?",
+        //     "1. JUMP"
+        // };
+        // List<string> jumpToLedge = new List<string>
+        // {
+        //     "You jump forward to the Ledge and your boots land on solid stone",
+        //     "The ledge is narrow with only enough space for you and a large bundle of fabric to your left",
+        //     "You lean down and pick up the strange item to find there is something wrapped within the old tattered cloth",
+        //     "You pull the wrapping away to reveal a suspiciously well preserved wooden bow and a leather quiver of arrows",
+        //     "Carved into the body of the bow you read the weapons name",
+        //     "~~Featherflight~~",
+        //     "You swing the quiver over your shoulder and he bow across your back and turn look out to the room of roots",
+        //     "EQUIPPED: 'Featherflight Bow",
+        //     "From your vantage point you see that the root platforms extend even higher up the room",
+        //     "Near the ceiling you spy another stone outcropping which you can reach by climbing",
+        //     "You shuffle along the small ledge to the end where there are two roots you could possibly jump to to make your way upwards"
+        // };
+        // List<string> toSecondLedge = new List<string>
+        // {
+        //     "You jump to the left root and as you are about to land on it, it vanishes revealing the large ledge",
+        //     "You land hard on the stone and roll forward, soming to a stop against the chamber wall",
+        //     "You stand up and dust yourself off, looking around",
+        //     "You spot a small wooden chest tucked between the broken stones where the wall meets the platform and make your way towards it",
+        //     "As you get closer, you hear chilling whispers coming from somewhere below you",
+        //     "You peak over the edge of the outcropping to find the chamber below you still empty of anything alive",
+        //     "Warily you head to the chest trying to ignore the haunting voices",
+        //     "You pull the chest free from where sits and lift the lid to reveal a 'Plain Black Key' sitting inside, next to a 'Twisted Black Metal Shard",
+        //     "You reach in to retrieve the contents and as your hands touch the cold metal of the Twisted sShard, the disembodied whispers stop leaving an empty cold silence to fill the room",
+        //     "You put the key and shard in your pack",
+        //     "INVENTORY: Added 'Plain Black Key'",
+        //     "INVENTORY: Added 'Twisted Black Metal Shard'",
+        //     "You look around for anything else but find nothing, so set about climbing back down to the chamber floor"
+        // };
 //         bool climbingStage1 = true;
 //         while (climbingStage1)
 //         {
@@ -692,61 +692,61 @@
 //                 }
 //             }
 //         }
-//         bool climbingStage2 = true;
-//         bool result = true;
-//         while (climbingStage2)
-//         {
-//             int level = 0;
-//             int nextJump = CheckOption(jumpChoices);
-//             switch (level)
-//             {
-//                 case 0:
-//                     result = nextJump == 0 ? false : true;
-//                     break;
-//                 case 1:
-//                     result = nextJump == 0 ? true : false;
-//                     break;
-//                 case 2:
-//                     result = nextJump == 0 ? false : true;
-//                     break;
-//                 case 3:
-//                     result = nextJump == 0 ? false : true;
-//                     break;
-//                 case 4:
-//                     result = nextJump == 0 ? true : false;
-//                     break;
-//                 case 5:
-//                     result = nextJump == 0 ? true : false;
-//                     break;
-//             }
-//             if (level < 5)
-//             {
-//                 if (result)
-//                 {
-//                     level++;
-//                     NextThroughDialogue(jumpSuccess);
-//                 }
-//                 else
-//                 {
-//                     NextThroughDialogue(jumpFailStage2);
-//                     level = 0;
-//                 }
-//             }
-//             else
-//             {
-//                 if (result)
-//                 {
-//                     NextThroughDialogue(toSecondLedge);
-//                     inv.Add(new KeyValuePair<string, string>("Twisted Black Key", "Opens small Black Door"));
-//                     climbingStage2 = false;
-//                 }
-//                 else
-//                 {
-//                     NextThroughDialogue(jumpFailStage2);
-//                     level = 0;
-//                 }
-//             }
-//         }
+        // bool climbingStage2 = true;
+        // bool result = true;
+        // while (climbingStage2)
+        // {
+        //     int level = 0;
+        //     int nextJump = CheckOption(jumpChoices);
+        //     switch (level)
+        //     {
+        //         case 0:
+        //             result = nextJump == 0 ? false : true;
+        //             break;
+        //         case 1:
+        //             result = nextJump == 0 ? true : false;
+        //             break;
+        //         case 2:
+        //             result = nextJump == 0 ? false : true;
+        //             break;
+        //         case 3:
+        //             result = nextJump == 0 ? false : true;
+        //             break;
+        //         case 4:
+        //             result = nextJump == 0 ? true : false;
+        //             break;
+        //         case 5:
+        //             result = nextJump == 0 ? true : false;
+        //             break;
+        //     }
+        //     if (level < 5)
+        //     {
+        //         if (result)
+        //         {
+        //             level++;
+        //             NextThroughDialogue(jumpSuccess);
+        //         }
+        //         else
+        //         {
+        //             NextThroughDialogue(jumpFailStage2);
+        //             level = 0;
+        //         }
+        //     }
+        //     else
+        //     {
+        //         if (result)
+        //         {
+        //             NextThroughDialogue(toSecondLedge);
+        //             inv.Add(new KeyValuePair<string, string>("Twisted Black Key", "Opens small Black Door"));
+        //             climbingStage2 = false;
+        //         }
+        //         else
+        //         {
+        //             NextThroughDialogue(jumpFailStage2);
+        //             level = 0;
+        //         }
+        //     }
+        // }
 //         return roomRecord;
 //     }
 

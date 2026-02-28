@@ -3,6 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Puzzles.CrystalPuzzle();
         //Gets player data and assigns to character object
         Console.WriteLine("Greetings adventurer! Prey tell, what is your name?");
         Characters.player.Name=Console.ReadLine();

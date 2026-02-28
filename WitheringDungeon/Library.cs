@@ -291,4 +291,35 @@ public static class GameOptions
         {
             "0. Walk through doorway"
         };
+        public static string[] RoomThreeNav = new string[]
+        {
+            "0. Menu",
+            "1. Investigate Chasm",
+            "2. Investigate Crystals"
+        };
+        public static string[] TryCross = new string[]
+        {
+            "0. Find a way across",
+            "1. Leave"
+        };
+        public static string[] TryMagic = new string[]
+        {
+            "0. Attempt Spell: Energy Blast"//consider mana cost
+        };
+        public static string[] FirstCrystal = new string[]
+        {
+            "0. YELLOW crystal"
+        };
+        public static string[] CrystalPuzzle = new string[]
+        {
+            "0. Continue using Energy Blast on crystals",
+            "1. Look for another way across"
+        };
+        public static string[] CrystalChoices = new string[] 
+        { 
+            "0. YELLOW", 
+            "1. PURPLE", 
+            "2. ORANGE", 
+            "3. WHITE" 
+        };
     }

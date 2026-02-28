@@ -109,4 +109,45 @@ public static class Puzzles
         }
 
     }
+    public static void CrystalPuzzle()
+    {
+        bool crystalPuzzle=true;
+        while (crystalPuzzle)
+        {
+            int platformCount=0;
+            Console.WriteLine("Which crystal next?");
+            switch (GameFunctions.CheckOption(GameOptions.CrystalChoices))
+            {
+                case 0:
+                    RoomThree.chasm[0] = RoomThree.chasm[0] == RoomThree.emptySpace ? RoomThree.platform : RoomThree.emptySpace;
+                    RoomThree.chasm[2] = RoomThree.chasm[2] == RoomThree.emptySpace ? RoomThree.platform : RoomThree.emptySpace;
+                    break;
+                case 1:
+                    RoomThree.chasm[0] = RoomThree.chasm[0] == RoomThree.emptySpace ? RoomThree.platform : RoomThree.emptySpace;
+                    RoomThree.chasm[1] = RoomThree.chasm[1] == RoomThree.emptySpace ? RoomThree.platform : RoomThree.emptySpace;
+                    break;
+                case 2:
+                    RoomThree.chasm[3] = RoomThree.chasm[3] == RoomThree.emptySpace ? RoomThree.platform : RoomThree.emptySpace;
+                    break;
+                case 3:
+                    RoomThree.chasm[1] = RoomThree.chasm[1] == RoomThree.emptySpace ? RoomThree.platform : RoomThree.emptySpace;
+                    break;
+            }
+            Console.WriteLine( "The ground rumbles as the ruby platforms move through the air");
+            Console.ReadLine();
+            Console.WriteLine($"Chasm: {string.Join(' ',RoomThree.chasm)}");
+            Console.ReadLine();
+            foreach (string space in RoomThree.chasm)
+            {
+                if (space == RoomThree.platform)
+                {
+                    platformCount++;
+                }
+            }
+            if (platformCount == 4)
+            {
+                crystalPuzzle = false;
+            }
+        }
+    }
 }

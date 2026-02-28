@@ -65,7 +65,7 @@ public static class Rooms
                     }
                     break;
                 case 2://Green Door
-                    if (Characters.player.Inventory.Contains(Items.AncientRoot))
+                    if (Characters.player.Inventory.Contains(Items.AncientRoot)&&(Characters.player.Mana>0))
                     {
                         GameFunctions.Dialogue(RoomOne.NoticeRecess);
                         int nA = GameFunctions.CheckOption(GameOptions.InvestigateRecess);
@@ -195,6 +195,40 @@ public static class Rooms
     }
     public static bool Three()
     {
+        GameFunctions.Dialogue(RoomThree.EnterRedRoom);
+        bool navigation = true;
+        while (navigation)
+        {
+            switch (GameFunctions.CheckOption(GameOptions.RoomThreeNav))
+            {
+                case 0://Menu
+                if (!GameFunctions.Menu())
+                    {
+                        return false;
+                    }
+                break;
+                case 1://Chasm
+                GameFunctions.Dialogue(RoomThree.InvestigateChasm);
+                    if (GameFunctions.CheckOption(GameOptions.TryCross) == 0)
+                    {
+                        GameFunctions.Dialogue(RoomThree.TryWall);
+                    }
+                break;
+                case 2://Crystals
+                GameFunctions.Dialogue(RoomThree.InvestigateCrystals);
+                int nA = GameFunctions.CheckOption(GameOptions.Jump);
+                GameFunctions.Dialogue(RoomThree.JumpForCrystals);
+                nA = GameFunctions.CheckOption(GameOptions.TryMagic);
+                GameFunctions.Dialogue(RoomThree.WhichCrystal);
+                nA = GameFunctions.CheckOption(GameOptions.FirstCrystal);
+                GameFunctions.Dialogue(RoomThree.AttackFirstCrystal);
+                    if (GameFunctions.CheckOption(GameOptions.CrystalPuzzle) == 0)
+                    {
+                        Puzzles.CrystalPuzzle();
+                    }
+                break;
+            }
+        }
         return true;
     }
 }

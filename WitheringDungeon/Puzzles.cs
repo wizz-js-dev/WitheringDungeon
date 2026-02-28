@@ -93,5 +93,20 @@ public static class Puzzles
                 }
             }
         }
+        //climb down
+        GameFunctions.Dialogue(RoomTwo.LeaveSecondLedge);
+        int na = GameFunctions.CheckOption(GameOptions.ClimbDown);
+        GameFunctions.Dialogue(RoomTwo.ClimbDown);
+        if (GameFunctions.CheckOption(GameOptions.GrabSatchel) == 0)
+        {
+            GameFunctions.Dialogue(RoomTwo.LeatherSatchel);
+            GameFunctions.Dialogue(Scrolls.Three);
+            Console.WriteLine($"{Characters.player.NewScroll()} of 5 collected!");
+            GameFunctions.Dialogue(RoomTwo.ContinueDown);
+            na = GameFunctions.CheckOption(GameOptions.Jump);
+            GameFunctions.Dialogue(RoomTwo.JumpToFloor);
+            return;
+        }
+
     }
 }

@@ -3,7 +3,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Puzzles.RootJumping();
         //Gets player data and assigns to character object
         Console.WriteLine("Greetings adventurer! Prey tell, what is your name?");
         Characters.player.Name=Console.ReadLine();
@@ -25,14 +24,14 @@ class Program
         }
         else
         {//All gameplay happens in here
-            //Enter room 1
+            //Enter room
             //return bool, if true next room if false end game
             bool gamePlay=true;
             while (gamePlay)
             {
                 gamePlay=Rooms.One();
                 if(gamePlay){gamePlay=Rooms.Two();};
-                //if(gamePlay){gamePlay=Rooms.Three();};
+                if(gamePlay){gamePlay=Rooms.Three();};
                 //if(gamePlay){gamePlay=Rooms.WitheringDungeon();};
             }
         }

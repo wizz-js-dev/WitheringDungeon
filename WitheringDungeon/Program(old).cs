@@ -483,32 +483,32 @@
 
 //                     break;
 //                 case 3:
-//                     //Red Door
-//                     List<string> redDoor = new List<string>
-//                 {
-//                     "You make your way over to the Red door, your boots splashing through stagnant water as you go",
-//                     "The door is impressively large and the rock surrounding it is carved in to sharp, crystal like points",
-//                     "Accross the door, an image of a serpent has been molded into the metal spiraling outward, each scale carefully etched so it almost looks real",
-//                     "In the centre of the door, where the serpents eye should be, sits only an empty space"
-//                 };
-//                     List<string> tryRed = new List<string>
-//                 {
-//                     "The door is so large, you doubt youd be able to push it open",
-//                     "Nonetheless, you press your shoulder against it, your face pressed close to the head of the serpent, and push with all your strength",
-//                     "Nothing, not even a creak"
-//                 };
-//                     List<string> openRed = new List<string>
-//                 {
-//                     "From your bag, you take out the 'Fiery Gemstone' and place it in to the serpents eye",
-//                     "As it clicks in to place, you begin to feel heat radiating off of the door"  ,
-//                     "The heat grows more intense and as you gaze upon it, the serpents eye blinks",
-//                     "The great red serpent begins to move back and forth across the door, the metal rippling like liquid",
-//                     "It winds its way up towards the top of the door, its long tail stretching all the way down behind it",
-//                     "A sound like metal under a blacksmiths hammer rings out into the room as the very tip of the tail lifts itself off of the door, sticking out and bending to the side",
-//                     "A handle?",
-//                     "You reach out and clasp your hand round the thick metal tail. It is warm to the touch",
-//                     "You turn the handle and push the door, finding it gives way without much effort revealing darkness beyond"
-//                 };
+                //     //Red Door
+                //     List<string> redDoor = new List<string>
+                // {
+                //     "You make your way over to the Red door, your boots splashing through stagnant water as you go",
+                //     "The door is impressively large and the rock surrounding it is carved in to sharp, crystal like points",
+                //     "Accross the door, an image of a serpent has been molded into the metal spiraling outward, each scale carefully etched so it almost looks real",
+                //     "In the centre of the door, where the serpents eye should be, sits only an empty space"
+                // };
+                //     List<string> tryRed = new List<string>
+                // {
+                //     "The door is so large, you doubt you'd be able to push it open",
+                //     "Nonetheless, you press your shoulder against it, your face pressed close to the head of the serpent, and push with all your strength",
+                //     "Nothing, not even a creak"
+                // };
+                //     List<string> openRed = new List<string>
+                // {
+                //     "From your bag, you take out the 'Fiery Gemstone' and place it in to the serpents eye",
+                //     "As it clicks in to place, you begin to feel heat radiating off of the door"  ,
+                //     "The heat grows more intense and as you gaze upon it, the serpents eye blinks",
+                //     "The great red serpent begins to move back and forth across the door, the metal rippling like liquid",
+                //     "It winds its way up towards the top of the door, its long tail stretching all the way down behind it",
+                //     "A sound like metal under a blacksmiths hammer rings out into the room as the very tip of the tail lifts itself off of the door, sticking out and bending to the side",
+                //     "A handle?",
+                //     "You reach out and clasp your hand round the thick metal tail. It is warm to the touch",
+                //     "You turn the handle and push the door, finding it gives way without much effort revealing darkness beyond"
+                // };
 //                     break;
 //                 case 4:
 //                     List<string> centrePlinth = new List<string>

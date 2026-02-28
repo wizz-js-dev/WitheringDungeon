@@ -144,10 +144,10 @@ public static class Rooms
     public static bool Two()
     {
         GameFunctions.Dialogue(RoomTwo.EnterGreen);
+        GameFunctions.Dialogue(RoomTwo.Description);
         bool navigation = true;
         while (navigation)
         {
-            GameFunctions.Dialogue(RoomTwo.Description);
             switch (GameFunctions.CheckOption(GameOptions.RoomTwoNav))
             {
                 case 0://Menu
@@ -166,17 +166,35 @@ public static class Rooms
                         }
                         else
                         {
-                            //already climbed dialogue option
+                            GameFunctions.Dialogue(RoomTwo.AlreadyClimbed);
                         }
                         
                     }
                 break;
                 case 2://Red Door
-                //Originally in room one in program(old)
-                //same as last room. If have gem open, if not struggle
+                GameFunctions.Dialogue(RoomTwo.RedDoor);
+                if (GameFunctions.CheckOption(GameOptions.TryRed )== 0)
+                {
+                    GameFunctions.Dialogue(RoomTwo.TryRed);
+                }
+                if (Characters.player.Inventory.Contains(Items.FieryGemstone))
+                {
+                    int nA = GameFunctions.CheckOption(GameOptions.TryGemstone);
+                    GameFunctions.Dialogue(RoomTwo.RedSerpent);
+                    Characters.player.Use(Items.FieryGemstone);
+                    nA=GameFunctions.CheckOption(GameOptions.RedHandle);
+                    GameFunctions.Dialogue(RoomTwo.RedHandle);
+                    nA=GameFunctions.CheckOption(GameOptions.ThroughRed);
+                    GameFunctions.Dialogue(RoomTwo.LeaveGreen);
+                    return true;
+                }
                 break;
             }
         }
+        return true;
+    }
+    public static bool Three()
+    {
         return true;
     }
 }

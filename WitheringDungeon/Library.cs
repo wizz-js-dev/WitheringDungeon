@@ -265,5 +265,30 @@ public static class GameOptions
             "0. Jump"
         };
         //climb down option
-        //search satchel
+        public static string [] ClimbDown = new string[]
+        {
+            "0. Climb down root"
+        };
+        public static string[] GrabSatchel = new string[]
+        {
+            "0. Grab satchel and search inside",
+            "1 Leave it be"
+        };
+        public static string[] TryRed = new string[]
+        {
+            "0. Try pushing the door",
+            "1. Back to room"
+        };
+        public static string[] TryGemstone = new string[]
+        {
+            "0. Try Gemstone"
+        };
+        public static string[] RedHandle = new string[]
+        {
+            "0. Turn the handle"
+        };
+        public static string[] ThroughRed = new string[]
+        {
+            "0. Walk through doorway"
+        };
     }

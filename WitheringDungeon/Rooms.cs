@@ -212,6 +212,7 @@ public static class Rooms
                     if (GameFunctions.CheckOption(GameOptions.TryCross) == 0)
                     {
                         GameFunctions.Dialogue(RoomThree.TryWall);
+                        //Add the scroll discovery here somehow
                     }
                 break;
                 case 2://Crystals
@@ -225,10 +226,47 @@ public static class Rooms
                     if (GameFunctions.CheckOption(GameOptions.CrystalPuzzle) == 0)
                     {
                         Puzzles.CrystalPuzzle();
+                        navigation=false;
                     }
                 break;
             }
         }
+        int na = GameFunctions.CheckOption(GameOptions.Jump);
+        GameFunctions.Dialogue(RoomThree.PlatformOne);
+        na = GameFunctions.CheckOption(GameOptions.Jump);
+        GameFunctions.Dialogue(RoomThree.PlatformTwo);
+        na = GameFunctions.CheckOption(GameOptions.TryMagic);
+        GameFunctions.Dialogue(RoomThree.PrizeCrystal);
+        //redo below to be less repetative?
+        na = GameFunctions.CheckOption(GameOptions.TakeSword);
+        GameFunctions.Dialogue(RoomThree.RedSword);
+        Characters.player.Equip(Weapons.SerpentsFang);
+        na = GameFunctions.CheckOption(GameOptions.TakePage);
+        GameFunctions.Dialogue(RoomThree.GlowingPage);
+        Characters.player.Learn(Spells.DragonsBreath);
+        na = GameFunctions.CheckOption(GameOptions.TakeKey);
+        GameFunctions.Dialogue(RoomThree.BlackKey);
+        Characters.player.PickUp(Items.PlainBlackKey);
+        
+        bool running=false;
+        while (!running)
+        {
+            if (GameFunctions.CheckOption(GameOptions.Run) == 0)
+            {
+                if (!GameFunctions.Menu())
+                    {
+                        return false;
+                    }
+            }
+            else
+            {
+                running=true;
+            }
+        }
+        GameFunctions.Dialogue(RoomThree.RunToDoor);
+        Characters.player.PickUp(Items.TwistedBlackShardThree);
+        Characters.player.Use(Items.PlainBlackKey);
+        GameFunctions.Dialogue(RoomThree.EscapeRed);
         return true;
     }
 }

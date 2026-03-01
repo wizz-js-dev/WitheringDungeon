@@ -36,7 +36,9 @@ public static class Items
     public static Item AncientRoot = new Item("Ancient Root","A small, piece of the root of some ancient tree. Petrified Moss clings to its surface");
     public static Item TwistedBlackShardOne = new Item("Twisted Black Metal Shard(1)","A sharp, gnarled piece of cold black metal. It makes you uncomfortable to look at it");
     public static Item TwistedBlackShardTwo = new Item("Twisted Black Metal Shard(2)","A sharp, gnarled piece of cold black metal. It seems to be repelled by the other shard in your pack");
+    public static Item TwistedBlackShardThree = new Item("Twisted Black Metal Shardf(3)","A sharp, gnarled piece of cold black metal. You feel it almost calling out to you from your pack");
     public static Item FieryGemstone = new Item("Fiery Gemstone","A large roung ruby that looks like it has flames licking at its surface from within");
+    public static Item PlainBlackKey = new Item("Plain Black Key","A simple black metal key");
 }
 
 public static class GameFunctions
@@ -321,5 +323,22 @@ public static class GameOptions
             "1. PURPLE", 
             "2. ORANGE", 
             "3. WHITE" 
+        };
+        public static string[] TakeSword = new string[]
+        {
+            "0. Take the RED sword"
+        };
+        public static string[] TakePage = new string[]
+        {
+            "0. Take the GLOWING page"
+        };
+        public static string[] TakeKey = new string[]
+        {
+            "0. Take the BLACK KEY"
+        };
+        public static string[] Run = new string[]
+        {
+            "0. Menu",
+            "1. RUN!!"
         };
     }

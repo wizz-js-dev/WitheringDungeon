@@ -141,7 +141,7 @@ public class Character
     public void Learn(Spell spell)
     {
         SpellBook.Add(spell);
-        Console.WriteLine($"~~You learned the spell {spell}");
+        Console.WriteLine($"~~You learned the spell {spell.Name}");
     }
     public int NewScroll()
     {

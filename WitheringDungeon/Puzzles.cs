@@ -149,5 +149,6 @@ public static class Puzzles
                 crystalPuzzle = false;
             }
         }
+        GameFunctions.Dialogue(RoomThree.PuzzleComplete);
     }
 }

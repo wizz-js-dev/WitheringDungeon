@@ -806,68 +806,68 @@
         //     "They come to a halt, level with the floor on which you stand, one directly at its edge and the other half way between the first and the other side",
         //     "You fire again at the YELLOW crystal and look on as the two platforms slowly drop back in to the shadows below"
 //         };
-//         List<string> puzzleComplete = new List<string>
-//         {
-//             "As the last platform lifts into place, giving you a clear path across the chasm, a shimmer runs across the walls of the chamber through every crystal",
-//             "The red wisps swirl round you and then dart out over the chasm, bobbing up and down over the platforms",
-//             "You make your way to the edge and jump over to the first platform",
-//             "Its slightly dips under your weight but then raises itself back up into position",
-//             "You hop to the next platform and the same happens",
-//             "As you ready to jump to the next foating crystal you notice the red wisps spiraling over head",
-//             "From between the platform you stand on and the next, rises a clear flat crystal as tall as you are",
-//             "It comes to a stop right in front of you and you see suspended within it an ornate red GREAT SWORD as well as a SMALL SCROLL and a small PLAIN BLACK KEY"
-//         };
+        // List<string> puzzleComplete = new List<string>
+        // {
+        //     "As the last platform lifts into place, giving you a clear path across the chasm, a shimmer runs across the walls of the chamber through every crystal",
+        //     "The red wisps swirl round you and then dart out over the chasm, bobbing up and down over the platforms",
+        //     "You make your way to the edge and jump over to the first platform",
+        //     "Its slightly dips under your weight but then raises itself back up into position",
+        //     "You hop to the next platform and the same happens",
+        //     "As you ready to jump to the next foating crystal you notice the red wisps spiraling over head",
+        //     "From between the platform you stand on and the next, rises a clear flat crystal as tall as you are",
+        //     "It comes to a stop right in front of you and you see suspended within it an ornate red GREAT SWORD as well as a SMALL SCROLL and a small PLAIN BLACK KEY"
+        // };
 
-//         List<string> prizeCrystal = new List<string>
-//         {
-//             "You cast magic once more, asiming right at the large crystal and as the energy hits its surface, it shatters into pieces"  ,
-//             "The crystal shards fall away into the chasm, leaving behind the GREAT SWORD and the SMALL SCROLL and PLAIN BLACK KEY floating before you"
-//         };
-//         List<string> takeSword = new List<string>
-//         {
-//             "You reach out and grasp the hilt of the GREAT SWORD",
-//             "The metal under your hand is warm and smooth and there is a sparkling ruby set into the pommel",
-//             "The guard is ornately molded to resemble twisting snakes with ruby eyes and sharp extended fangs",
-//             "You pull the sword from its scabbard to reveal a bright red metal blade with perilously sharp edges",
-//             "Inscribed down the flat of the blade is the weapons name",
-//             "~~~Serpents Fang~~~",
-//             "You afix the scabbard and sword to your belt",
-//             "EQUIPPED: Serpents Fang"
-//         };
-//         List<string> takeScroll = new List<string>
-//         {
-//             "You reach forward and take the SMALL SCROLL from where it floats",
-//             "You open it gently, to read its contents",
-//             "-'Spell: Dragons Breath'-",
-//             "-'5 Fire damage'-",
-//             "-'Cost: 2 Mana'-",
-//             "As your eyes reach the last word, the scroll sets alight in your hands, the flames flowing like a serpent round your arm and then back up to your hand ",
-//             "The firey snake flows into 'The Sorcerors Heart' and is gone, leaving your arm burning from the inside",
-//             "NEW SPELL: Dragons Breath"
-//         };
-//         List<string> takeKey = new List<string>
-//         {
-//             "You reach out and take the PLAIN BLACK KEY",
-//             "As your hands wrap round the cold metal, all the light in the room flickers and dims",
-//             "From below you, deep in the chasm you hear the sound of scraping against stone",
-//             "You can also hear harsh, angry whispers like an angry, but quiet, mob growing ever closer",
-//             "A chill runs down your entire frame as the scraping sound gets louder"
-//         };
-//         List<string> escapeRed = new List<string>
-//         {
-//             "Key still in hand, you hurriedly jump to the third platform, then the next and then finally to the other side of the chasm",
-//             "As your feet hit the crystal ground, the ruby platforms behind you crack and splinter before falling away",
-//             "The whispers are coming from all around now and the light coming from the walls is almost gone",
-//             "You race over to the BLACK DOOR and quickly put the 'Plain Black Key' into the key hole in its centre and turn it",
-//             "The key clicks in the lock, and then pushes itself back out into your hand",
-//             "You look down to see the 'Plain Black Key' morphing its shape, folding over and in on itself like thick tar",
-//             "The movements cease, leaving behind a gnarled, mess of metal behind which you quickly add to your pack",
-//             "INVENTORY: Added 'Twisted Black Metal Shard",
-//             "In front of you the door groans as it swings away and you feel yourself being push forward into the dark corridor beyond",
-//             "You turn to see the red wisps, almost invisible now, urging you forward and soon you are through the doorway",
-//             "Darkness engulfs you as all light fades and the doorway behind you dissapears leaving behind a solid stone wall",
-//             "It is silent now but the memory of the scratching and whispering still echoes in your mind as you creep forward into the shadows.."
-//         };
+        // List<string> prizeCrystal = new List<string>
+        // {
+        //     "You cast magic once more, asiming right at the large crystal and as the energy hits its surface, it shatters into pieces"  ,
+        //     "The crystal shards fall away into the chasm, leaving behind the GREAT SWORD and the SMALL SCROLL and PLAIN BLACK KEY floating before you"
+        // };
+        // List<string> takeSword = new List<string>
+        // {
+        //     "You reach out and grasp the hilt of the GREAT SWORD",
+        //     "The metal under your hand is warm and smooth and there is a sparkling ruby set into the pommel",
+        //     "The guard is ornately molded to resemble twisting snakes with ruby eyes and sharp extended fangs",
+        //     "You pull the sword from its scabbard to reveal a bright red metal blade with perilously sharp edges",
+        //     "Inscribed down the flat of the blade is the weapons name",
+        //     "~~~Serpents Fang~~~",
+        //     "You afix the scabbard and sword to your belt",
+        //     "EQUIPPED: Serpents Fang"
+        // };
+        // List<string> takeScroll = new List<string>
+        // {
+        //     "You reach forward and take the SMALL SCROLL from where it floats",
+        //     "You open it gently, to read its contents",
+        //     "-'Spell: Dragons Breath'-",
+        //     "-'5 Fire damage'-",
+        //     "-'Cost: 2 Mana'-",
+        //     "As your eyes reach the last word, the scroll sets alight in your hands, the flames flowing like a serpent round your arm and then back up to your hand ",
+        //     "The firey snake flows into 'The Sorcerors Heart' and is gone, leaving your arm burning from the inside",
+        //     "NEW SPELL: Dragons Breath"
+        // };
+        // List<string> takeKey = new List<string>
+        // {
+        //     "You reach out and take the PLAIN BLACK KEY",
+        //     "As your hands wrap round the cold metal, all the light in the room flickers and dims",
+        //     "From below you, deep in the chasm you hear the sound of scraping against stone",
+        //     "You can also hear harsh, angry whispers like an angry, but quiet, mob growing ever closer",
+        //     "A chill runs down your entire frame as the scraping sound gets louder"
+        // };
+        // List<string> escapeRed = new List<string>
+        // {
+        //     "Key still in hand, you hurriedly jump to the third platform, then the next and then finally to the other side of the chasm",
+        //     "As your feet hit the crystal ground, the ruby platforms behind you crack and splinter before falling away",
+        //     "The whispers are coming from all around now and the light coming from the walls is almost gone",
+        //     "You race over to the BLACK DOOR and quickly put the 'Plain Black Key' into the key hole in its centre and turn it",
+        //     "The key clicks in the lock, and then pushes itself back out into your hand",
+        //     "You look down to see the 'Plain Black Key' morphing its shape, folding over and in on itself like thick tar",
+        //     "The movements cease, leaving behind a gnarled, mess of metal behind which you quickly add to your pack",
+        //     "INVENTORY: Added 'Twisted Black Metal Shard",
+        //     "In front of you the door groans as it swings away and you feel yourself being push forward into the dark corridor beyond",
+        //     "You turn to see the red wisps, almost invisible now, urging you forward and soon you are through the doorway",
+        //     "Darkness engulfs you as all light fades and the doorway behind you dissapears leaving behind a solid stone wall",
+        //     "It is silent now but the memory of the scratching and whispering still echoes in your mind as you creep forward into the shadows.."
+        // };
 //         string[] chasm = new string[] { "_____", "_____", "_____", "_____" };
 //         string platform = "|||||";
 //         string emptySpace = "_____";

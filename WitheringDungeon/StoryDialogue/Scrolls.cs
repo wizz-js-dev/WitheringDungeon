@@ -67,7 +67,8 @@ public static class Scrolls
     };
     public static List<string> Five { get; } = new List<string>
     {
-        "You unfurl the scroll and read the messily written words written on it",
+        "You unfurl the scroll and read the words on it",
+        $"The writing looks hurried and has smeared in a few places as if by drops of water..or tears {(Characters.player.Scrolls==4?"but you recognise the swirling, elegant lettering":"and the lettering is flourished and elegant")} ",
             "--THE WITHERING RITUAL--",
             "--We managed to lure the Twisted Knight here to the temple and have trapped them in enchanted bindings",
             "--They won't hold for long though, and shadows help us when they break loose",

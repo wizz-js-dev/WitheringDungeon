@@ -272,12 +272,112 @@ public static class Rooms
     }
     public static bool Corridor()
     {
-        
+        GameFunctions.Dialogue(ForeverCorridor.EnterCorridor);
+        for(int i = 0; i < 2; i++)
+        {
+            if (GameFunctions.CheckOption(GameOptions.TryTwistedDoor) == 0)
+            {
+                GameFunctions.Dialogue(ForeverCorridor.SpellOnDoor);
+            }
+            else
+            {
+                GameFunctions.Dialogue(ForeverCorridor.SwordOnDoor);
+            }
+        }
+        GameFunctions.CheckOption(GameOptions.TryTwistedDoorOther);
+        GameFunctions.Dialogue(ForeverCorridor.PackWisp);
+        GameFunctions.CheckOption(GameOptions.WhatWisp);
+        GameFunctions.Dialogue(ForeverCorridor.WispConvo);
+        GameFunctions.CheckOption(GameOptions.OpenPack);
+        GameFunctions.Dialogue(ForeverCorridor.LookInBag);
+        foreach(Item item in Characters.player.Inventory)
+        {
+            if (item.Name.Contains("Twisted"))
+            {
+                Console.WriteLine($"{item.Name.ToUpper()}{Environment.NewLine}");
+            }
+            else
+            {
+                Console.WriteLine($"{item.Name}{Environment.NewLine}");
+            }
+            
+        }
+        GameFunctions.CheckOption(GameOptions.TakeShards);
+        GameFunctions.Dialogue(ForeverCorridor.TwistedMetalForge);
+        foreach(string line in ForeverCorridor.Forging)
+        {
+            GameFunctions.CheckOption(GameOptions.HoldTighter);
+            Console.WriteLine(line);
+        }
+        GameFunctions.CheckOption(GameOptions.Release);
+        GameFunctions.Dialogue(ForeverCorridor.TwistedKey);
+        GameFunctions.CheckOption(GameOptions.OpenBlack);
+        GameFunctions.Dialogue(ForeverCorridor.OpenBlackDoor);
         return true;
     }
-    public static bool WitheringDungeon()
+    public static bool Final()
     {
+        GameFunctions.Dialogue(WitheringShadeChamber.Enter);
+        bool navigation = true;
+        bool[] haveLookedAround = new bool[2];
+        while (navigation)
+        {
+            switch (GameFunctions.CheckOption(GameOptions.WitherNav))
+            {
+                case 0://Grate
+                GameFunctions.Dialogue(WitheringShadeChamber.Grate);
+                haveLookedAround[0]=true;
+                break;
+                case 1://Hole
+                GameFunctions.Dialogue(WitheringShadeChamber.CeilingHole);
+                haveLookedAround[0]=true;
+                break;
+                case 2://shelf
+                    if (!haveLookedAround[0] || !haveLookedAround[1])
+                    {
+                        GameFunctions.Dialogue(WitheringShadeChamber.DoubleChk);
+                        if (GameFunctions.CheckOption(GameOptions.DoubleCheck) == 1)
+                        {
+                            GameFunctions.Dialogue(WitheringShadeChamber.Shelf);
+                            GameFunctions.CheckOption(GameOptions.LastScroll);
+                            GameFunctions.Dialogue(Scrolls.Five);
+                            Console.WriteLine($"SCROLLS: {Characters.player.Scrolls} out of 5 collected!");
+                            GameFunctions.Dialogue(WitheringShadeChamber.AfterScroll);
+                            GameFunctions.CheckOption(GameOptions.Turn);
+                            //HERE WE GO BABEY!
+                            GameFunctions.Dialogue(WitheringShadeChamber.TheWitheringShade);
 
+                            //here is shelf
+                            navigation=false;
+                        }
+                    }
+                break;
+            }
+        }
+        // Combat.Start();
+        //here call combat
         return false;//change when decide post game
+    }
+    public static bool DemoMode()
+    {
+        Characters.player.Learn(Spells.DragonsBreath);
+        Characters.player.Learn(Spells.EnergyBlast);
+        Characters.player.Equip(Weapons.FeatherFlight);
+        Characters.player.Equip(Weapons.SerpentsFang);
+        Characters.player.PickUp(Items.DraughtVitality);
+        Characters.player.PickUp(Items.TwistedBlackShardOne);
+        Console.ReadLine();
+        Console.WriteLine("Greetings adventurer! Prey tell, what is your name?");
+        Characters.player.NameAssign(Console.ReadLine()!);
+        Characters.player.Mana+=10;
+        GameOptions.MenuOptions[2]="2. SpellBook";
+        if (!GameFunctions.Menu())
+        {
+            return false;
+        }
+        GameFunctions.Dialogue(Demo.Crystals);
+        Puzzles.CrystalPuzzle();
+        return false;
+       
     }
 }

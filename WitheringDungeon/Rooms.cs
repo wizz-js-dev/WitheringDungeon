@@ -54,6 +54,7 @@ public static class Rooms
                                         GameFunctions.Dialogue(RoomOne.RingGet);
                                         Characters.player.Mana+=5;
                                         GameOptions.MenuOptions[2]="2. SpellBook";
+                                        Characters.player.Learn(Spells.EnergyBlast);
                                         GameOptions.ChestItemOptions[3]="-";
                                     }
                                     break;
@@ -268,5 +269,15 @@ public static class Rooms
         Characters.player.Use(Items.PlainBlackKey);
         GameFunctions.Dialogue(RoomThree.EscapeRed);
         return true;
+    }
+    public static bool Corridor()
+    {
+        
+        return true;
+    }
+    public static bool WitheringDungeon()
+    {
+
+        return false;//change when decide post game
     }
 }

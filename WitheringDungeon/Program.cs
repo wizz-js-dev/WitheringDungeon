@@ -3,10 +3,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Rooms.Three();
         //Gets player data and assigns to character object
         Console.WriteLine("Greetings adventurer! Prey tell, what is your name?");
-        Characters.player.Name=Console.ReadLine();
+        Characters.player.NameAssign(Console.ReadLine()!);
         Console.WriteLine("How strong are you?");
         Characters.player.StatAssign(Console.In);
 
@@ -31,9 +30,10 @@ class Program
             while (gamePlay)
             {
                 gamePlay=Rooms.One();
-                if(gamePlay){gamePlay=Rooms.Two();};
-                if(gamePlay){gamePlay=Rooms.Three();};
-                //if(gamePlay){gamePlay=Rooms.WitheringDungeon();};
+                if(gamePlay){gamePlay=Rooms.Two();}
+                if(gamePlay){gamePlay=Rooms.Three();}
+                if(gamePlay){gamePlay=Rooms.Corridor();}
+                //if(gamePlay){gamePlay=Rooms.WitheringDungeon();}
             }
         }
         

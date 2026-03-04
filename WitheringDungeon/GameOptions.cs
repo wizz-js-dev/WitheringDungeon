@@ -1,0 +1,176 @@
+public static class GameOptions
+    {
+        public static string[] MenuOptions = new string[]
+        {
+            "0. Inventory",
+            "1. Weapons",
+            "2. Locked",
+            "3. Stats and Progress",
+            "4. History",
+            "5. Leave Menu",
+            "6. Quit Game"
+        };
+        public static string[] TakeScrollOne = new string[]
+        {
+            "0. Take Scroll","1. Leave it"
+        };
+        public static string[] EnterDungeon = new string[]
+        { 
+        "0. Bravely Push The Door Open","1. Turn back in fear"
+        };
+        public static string[] RoomOneNav = new string[]
+        {
+            "0. Menu", 
+            "1. Investigate the alcove to the left", 
+            "2. Cross to the GREEN door", 
+            "3. Go to the centre of the room" 
+        };
+        public static string[] ChestOptions = new string[] 
+        {
+            "0. Try the clasp", 
+            "1. Leave it be" 
+        };
+        public static string[] ChestItemOptions = new string[] 
+        { 
+            "0. Leave Alcove", 
+            "1. The left vial", 
+            "2. The right vial", 
+            "3. The wooden box" 
+            };
+        public static string[] TryDoor = new string[]
+        {
+            "0. Try pushing door", 
+            "1. Return to room"
+        };
+        public static string[] UseRoot = new string[]
+        {
+            "0. Try Ancient Root"
+        };
+        public static string[] PlinthOptions = new string[]
+        {
+            "0. Touch the runes",
+            "1. Look into the Liquid"
+        };
+        public static string[] LiquidIfRuned = new string[]
+        {
+            "0. Run fingers across runes"
+        };
+        public static string[] TakeRootAndShard = new string[]
+        {
+            "0. Reach in and grab the items"
+        };
+        public static string[] InvestigateRecess = new string[]
+        {
+            "0. Go over and investigate"
+        };
+        public static string[] InvestigateMushroom = new string[]
+        {
+            "0. Try to touch wisp",
+            "1. Look under mushroom cap"
+        };
+        public static string[] TakeScrollTwo = new string[]
+        {
+            "0. Take the item"
+        };
+        public static string[] CreepToDoor = new string[]
+        {
+            "0. Get to the GREEN door"
+        };
+        //Room Two Options
+
+        public static string[] RoomTwoNav = new string[]
+        {
+            "0. Menu",
+            "1. Investigate Roots",
+            "2. Head over to RED door"
+        };
+        public static string[] ClimbRoots = new string[]
+        {
+            "0. Attempt to climb roots",
+            "1. Look Elsewhere"
+        };
+        public static string[] JumpingChoices = new string[]
+        {
+            "0. Jump Left",
+            "1 Jump Right"
+        };
+        public static string[] Jump = new string[]
+        {
+            "0. Jump"
+        };
+        //climb down option
+        public static string [] ClimbDown = new string[]
+        {
+            "0. Climb down root"
+        };
+        public static string[] GrabSatchel = new string[]
+        {
+            "0. Grab satchel and search inside",
+            "1 Leave it be"
+        };
+        public static string[] TryRed = new string[]
+        {
+            "0. Try pushing the door",
+            "1. Back to room"
+        };
+        public static string[] TryGemstone = new string[]
+        {
+            "0. Try Gemstone"
+        };
+        public static string[] RedHandle = new string[]
+        {
+            "0. Turn the handle"
+        };
+        public static string[] ThroughRed = new string[]
+        {
+            "0. Walk through doorway"
+        };
+        public static string[] RoomThreeNav = new string[]
+        {
+            "0. Menu",
+            "1. Investigate Chasm",
+            "2. Investigate Crystals"
+        };
+        public static string[] TryCross = new string[]
+        {
+            "0. Find a way across",
+            "1. Leave"
+        };
+        public static string[] TryMagic = new string[]
+        {
+            "0. Attempt Spell: Energy Blast"//consider mana cost
+        };
+        public static string[] FirstCrystal = new string[]
+        {
+            "0. YELLOW crystal"
+        };
+        public static string[] CrystalPuzzle = new string[]
+        {
+            "0. Continue using Energy Blast on crystals",
+            "1. Look for another way across"
+        };
+        public static string[] CrystalChoices = new string[] 
+        { 
+            "0. YELLOW", 
+            "1. PURPLE", 
+            "2. ORANGE", 
+            "3. WHITE" 
+        };
+        public static string[] TakeSword = new string[]
+        {
+            "0. Take the RED sword"
+        };
+        public static string[] TakePage = new string[]
+        {
+            "0. Take the GLOWING page"
+        };
+        public static string[] TakeKey = new string[]
+        {
+            "0. Take the BLACK KEY"
+        };
+        public static string[] Run = new string[]
+        {
+            "0. Menu",
+            "1. RUN!!"
+        };
+    }

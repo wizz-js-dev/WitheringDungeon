@@ -1,69 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-
-public class Spell
-{
-    public string Name { get; set; }
-    public int Damage { get; set; }
-    public string StatAffect { get; set; }
-    public int Mana { get; set; }
-    public string Type { get; set; }
-    public string Sequence { get; set; }
-
-    public Spell(string name, int damage, string stat, int mana, string type, string sequence)
-    {
-        Name = name;
-        Damage = damage;
-        Mana = mana;
-        Type = type;
-        Sequence = sequence;
-        StatAffect = stat;
-    }
-}
-public class Weapon
-{
-    public string Name { get; set; }
-    public string Description{get;set;}
-    public int Damage { get; set; }
-    public string Type { get; set; }
-    public string Sequence { get; set; }
-
-    public Weapon(string name,string descr, int damage, string type, string sequence)
-    {
-        Name = name;
-        Description=descr;
-        Damage = damage;
-        Type = type;
-        Sequence = sequence;
-    }
-}
-public class Move
-{
-    public string Name { get; set; }
-    public int Damage { get; private set; }
-    public string Type { get; private set; }
-    public string Sequence { get; private set; }
-    public int Mana { get; private set; }
-    public string Stat { get; private set; }
-
-    public void Cast(Spell spell)
-    {
-        Name = spell.Name;
-        Damage = spell.Damage;
-        Type = spell.Type;
-        Sequence = spell.Sequence;
-        Mana = spell.Mana;
-        Stat = spell.StatAffect;
-    }
-    public void Use(Weapon weapon)
-    {
-        Name = weapon.Name;
-        Damage = weapon.Damage;
-        Type = weapon.Type;
-        Sequence = weapon.Sequence;
-        Mana = 0;
-        Stat = "health";
-    }
-}
 public class Character
 {
     public string Name { get; set; }
@@ -148,6 +82,12 @@ public class Character
         Scrolls++;
         return Scrolls;
     }
+    public void NameAssign (string name)
+    {
+        Name=name;
+        Console.WriteLine($"Welcome, traveller {Name}");
+        Console.ReadLine();
+    }
     public void StatAssign(TextReader reader)
     {
         int restoreValue=AttributePoints;
@@ -178,28 +118,10 @@ public class Character
         
     }
 }
-public class Item
+
+public static class Characters
 {
-    public string Name { get; set; }
-    public string Description { get; set; }
-
-
-    public Item(string name, string descr)
-    {
-        Name = name;
-        Description = descr;
-    }
+    public static Character player { get; } = new Character("", 20, "poison");
+    public static Character witheringShade { get; } = new Character("The Withering Shade", 25, "fire");
 }
-public class UseableItem : Item
-{
-    public int Boost { get; set; }
-    public string Attribute { get; set; }
 
-    public UseableItem(string name, string descr, int boost, string attr) :base(name,descr)
-    {
-        Name = name;
-        Description = descr;
-        Boost = boost;
-        Attribute = attr;
-    }
-}

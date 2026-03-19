@@ -13,6 +13,10 @@ public static class Puzzles
                 int nA=GameFunctions.CheckOption(GameOptions.Jump);
                 GameFunctions.Dialogue(RoomTwo.JumpFail);
             }
+            else if(GameFunctions.CheckOption(GameOptions.JumpingChoices) == 2)
+            {
+                climbingStageOne=false;
+            }
             else
             {
                 GameFunctions.Dialogue(RoomTwo.JumpSuccess);
@@ -45,6 +49,7 @@ public static class Puzzles
             switch (level)
             {
                 case 0:
+                    if(nextJump==2){level=5;break;};
                     result = nextJump == 0 ? false : true;
                     break;
                 case 1:
@@ -63,7 +68,7 @@ public static class Puzzles
                     result = nextJump == 0 ? true : false;
                     break;
             }
-            Console.WriteLine($"Result: {result}");
+            // Console.WriteLine($"Result: {result}");
             if (level < 5)
             {
                 if (result)
@@ -132,6 +137,12 @@ public static class Puzzles
                 case 3:
                     RoomThree.chasm[1] = RoomThree.chasm[1] == RoomThree.emptySpace ? RoomThree.platform : RoomThree.emptySpace;
                     break;
+                case 4:// Option blank, used to solve puzzle for demo
+                    for(int i = 0; i < 4; i++)
+                    {
+                        RoomThree.chasm[i]=RoomThree.platform;
+                    }
+                break;
             }
             Console.WriteLine( "The ground rumbles as the ruby platforms move through the air");
             Console.ReadLine();

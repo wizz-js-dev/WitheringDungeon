@@ -117,6 +117,46 @@ public class Character
         }
         
     }
+    public void Cast(Spell spell,Character defender)
+    {
+        int bonus=0;
+        if (Speed + GameFunctions.D20Roll() > defender.Evasiveness)
+        {
+            int damage=Attack+spell.Damage+bonus-defender.Defence;
+            Mana-=spell.Mana;
+            Console.WriteLine(spell.Sequence);
+            Console.ReadLine();
+            switch (spell.StatAffect)
+            {
+                case "health":
+                defender.Health-=damage;
+                Console.WriteLine($"{defender.Name} loses {damage} {spell.StatAffect} points.");
+                Console.ReadLine();
+                break;
+                case "evasiveness":
+                defender.Evasiveness-=spell.Damage;
+                Console.WriteLine($"{defender.Name} loses {spell.Damage} {spell.StatAffect} points.");
+                Console.ReadLine();
+                break;
+            }
+        }
+    }
+    public void AttackWith (Weapon weapon, Character defender)
+    {
+        if (Speed + GameFunctions.D20Roll() > defender.Evasiveness)
+        {
+            int damage = Attack+weapon.Damage-defender.Defence;
+            defender.Health-=damage;
+            Console.WriteLine(weapon.Sequence);
+            Console.ReadLine();
+            Console.WriteLine($"{defender.Name} loses {damage} health");
+            Console.ReadLine();
+        }
+        else
+        {
+            Console.WriteLine($"{Name} trys attacking with {weapon.Name} but misses!");
+        }
+    }
 }
 
 public static class Characters

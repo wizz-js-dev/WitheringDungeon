@@ -91,7 +91,7 @@ public static class Scrolls
             "--If I die today, know that I gave my life willingly to rid the world of its greatest threat",
             "--Let my sacrifice be payment in part for the suffering my own creation inflicted upon this world"
     };
-    public static List<string> witherWisp { get; } = new List<string>
+    public static List<string> WitherWisp { get; } = new List<string>
     {
         "You nervously open the scroll and read what lies within:",
             "##THE WITHER AND WISP KNIGHT##",

@@ -92,7 +92,8 @@ public static class GameOptions
     public static string[] JumpingChoices = new string[]
     {
         "0. Jump Left",
-        "1 Jump Right"
+        "1. Jump Right",
+        "2. Dev Cheat x 3 times"
     };
     public static string[] Jump = new string[]
     {
@@ -154,7 +155,8 @@ public static class GameOptions
         "0. YELLOW", 
         "1. PURPLE", 
         "2. ORANGE", 
-        "3. WHITE" 
+        "3. WHITE",
+        " " 
     };
     public static string[] TakeSword = new string[]
     {
@@ -216,8 +218,7 @@ public static class GameOptions
     };
     public static string[] DoubleCheck = new string[]
     {
-        "0. Maybe look around",
-        "1. Go to shelf"
+        "0. Maybe look around more.."
     };
     public static string[] LastScroll = new string[]
     {
@@ -226,5 +227,41 @@ public static class GameOptions
     public static string[] Turn = new string[]
     {
         "0. ...turn around..."
+    };
+    public static string[] Fight = new string[]
+    {
+        "0. FIGHT!"
+    };
+
+    public static string[] CombatChoices = new string[]
+    {
+        "0. Use Weapon",
+        "1. Cast Spell",
+        "2. Use Item",
+        "3. Get ready to dodge"
+    };
+    public static string[] Fire = new string[]
+    {
+        "0. Cast Dragons Breath.."
+    };
+    public static string[] Shoot = new string[]
+    {
+        "0. Shoot an arrow where the outcropping meets the ceiling.."
+    };
+    public static string[] Finish=new string[]{
+        "0. Finish it off!"
+    };
+    public static string[] FinalScroll = new string[]
+    {
+        "0. Read the final scroll!"
+    };
+    public static string[] Leave = new string[]
+    {
+        "0. Go home"
+    };
+    public static string[] FinalFork = new string[]
+    {
+        "0. Investigate the shadow",
+        "1. Ignore it and leave"
     };
 }

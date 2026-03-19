@@ -4,16 +4,16 @@ public static class Rooms
     {
         bool navigation = true;
         GameFunctions.Dialogue(RoomOne.Description);
-        while(navigation)
-        {           
-            switch(GameFunctions.CheckOption(GameOptions.RoomOneNav))
+        while (navigation)
+        {
+            switch (GameFunctions.CheckOption(GameOptions.RoomOneNav))
             {
                 case 0://open menu
                     if (!GameFunctions.Menu())
                     {
                         return false;
                     }
-                break;
+                    break;
                 case 1://Alcove
                     GameFunctions.Dialogue(RoomOne.AlcoveDescription);
                     if (GameFunctions.CheckOption(GameOptions.ChestOptions) == 0)
@@ -22,22 +22,22 @@ public static class Rooms
                         bool choosingItem = true;
                         while (choosingItem)
                         {
-                            if(
-                                Characters.player.Inventory.Contains(Items.ElixirMagic)&&
-                                Characters.player.Inventory.Contains(Items.DraughtVitality)&&
-                                Characters.player.Mana==5
+                            if (
+                                Characters.player.Inventory.Contains(Items.ElixirMagic) &&
+                                Characters.player.Inventory.Contains(Items.DraughtVitality) &&
+                                Characters.player.Mana == 5
                             )
                             {
-                                choosingItem=false;
+                                choosingItem = false;
                             }
-                            switch(GameFunctions.CheckOption(GameOptions.ChestItemOptions))
+                            switch (GameFunctions.CheckOption(GameOptions.ChestItemOptions))
                             {
                                 case 1:
                                     if (!Characters.player.Inventory.Contains(Items.DraughtVitality))
                                     {
                                         GameFunctions.Dialogue(RoomOne.DraughtVitaltyGet);
                                         Characters.player.PickUp(Items.DraughtVitality);
-                                        GameOptions.ChestItemOptions[1]="-";
+                                        GameOptions.ChestItemOptions[1] = "-";
                                     }
                                     break;
                                 case 2:
@@ -45,28 +45,28 @@ public static class Rooms
                                     {
                                         GameFunctions.Dialogue(RoomOne.ElixirMagicGet);
                                         Characters.player.PickUp(Items.ElixirMagic);
-                                        GameOptions.ChestItemOptions[2]="-";
+                                        GameOptions.ChestItemOptions[2] = "-";
                                     }
                                     break;
                                 case 3:
-                                    if (Characters.player.Mana==0)
+                                    if (Characters.player.Mana == 0)
                                     {
                                         GameFunctions.Dialogue(RoomOne.RingGet);
-                                        Characters.player.Mana+=5;
-                                        GameOptions.MenuOptions[2]="2. SpellBook";
+                                        Characters.player.Mana += 5;
+                                        GameOptions.MenuOptions[2] = "2. SpellBook";
                                         Characters.player.Learn(Spells.EnergyBlast);
-                                        GameOptions.ChestItemOptions[3]="-";
+                                        GameOptions.ChestItemOptions[3] = "-";
                                     }
                                     break;
                                 case 0:
-                                    choosingItem=false;
+                                    choosingItem = false;
                                     break;
                             }
                         }
                     }
                     break;
                 case 2://Green Door
-                    if (Characters.player.Inventory.Contains(Items.AncientRoot)&&(Characters.player.Mana>0))
+                    if (Characters.player.Inventory.Contains(Items.AncientRoot) && (Characters.player.Mana > 0))
                     {
                         GameFunctions.Dialogue(RoomOne.NoticeRecess);
                         int nA = GameFunctions.CheckOption(GameOptions.InvestigateRecess);
@@ -75,21 +75,21 @@ public static class Rooms
                         while (!foundScroll)
                         {
                             if (GameFunctions.CheckOption(GameOptions.InvestigateMushroom) == 0)
-                        {
-                            GameFunctions.Dialogue(RoomOne.TryTouchWisp);
-                        }
+                            {
+                                GameFunctions.Dialogue(RoomOne.TryTouchWisp);
+                            }
                             else
                             {
                                 GameFunctions.Dialogue(RoomOne.UnderMushroom);
-                                nA=GameFunctions.CheckOption(GameOptions.TakeScrollTwo);
+                                nA = GameFunctions.CheckOption(GameOptions.TakeScrollTwo);
                                 GameFunctions.Dialogue(Scrolls.Two);
                                 Console.WriteLine($"SCROLLS: {Characters.player.NewScroll()} of 5 collected!");
-                                foundScroll=true;
+                                foundScroll = true;
                             }
                         }
                         GameFunctions.Dialogue(RoomOne.Whispers);
-                        nA=GameFunctions.CheckOption(GameOptions.CreepToDoor);
-                        GameFunctions.Dialogue(RoomOne.ToDoorFinal);                        
+                        nA = GameFunctions.CheckOption(GameOptions.CreepToDoor);
+                        GameFunctions.Dialogue(RoomOne.ToDoorFinal);
                     }
                     else
                     {
@@ -104,39 +104,39 @@ public static class Rooms
                             Characters.player.Use(Items.AncientRoot);
                             GameFunctions.Dialogue(RoomOne.OpenDoor);
                             GameFunctions.Dialogue(RoomOne.NextRoom);
-                            navigation=false;
+                            navigation = false;
                             return true;
                         }
                     }
-                break;
+                    break;
                 case 3:
-                    bool runeGlow=false;
-                    bool atPlinth=true;
+                    bool runeGlow = false;
+                    bool atPlinth = true;
                     GameFunctions.Dialogue(RoomOne.CentrePlinth);
                     while (atPlinth)
                     {
                         if (GameFunctions.CheckOption(GameOptions.PlinthOptions) == 0)
                         {
-                            runeGlow=true;
+                            runeGlow = true;
                             GameFunctions.Dialogue(RoomOne.Runes);
                         }
                         else
                         {
                             GameFunctions.Dialogue(RoomOne.MysteriousLiquid);
-                            if (runeGlow&&!Characters.player.Inventory.Contains(Items.AncientRoot))
+                            if (runeGlow && !Characters.player.Inventory.Contains(Items.AncientRoot))
                             {
                                 int nA = GameFunctions.CheckOption(GameOptions.LiquidIfRuned);
                                 GameFunctions.Dialogue(RoomOne.ActivatePlinth);
-                                nA=GameFunctions.CheckOption(GameOptions.TakeRootAndShard);
+                                nA = GameFunctions.CheckOption(GameOptions.TakeRootAndShard);
                                 GameFunctions.Dialogue(RoomOne.PlinthItems);
                                 Characters.player.PickUp(Items.AncientRoot);
                                 Characters.player.PickUp(Items.TwistedBlackShardOne);
-                                atPlinth=false;
+                                atPlinth = false;
                             }
                         }
                     }
-                    
-                break;
+
+                    break;
 
             }
         }
@@ -153,12 +153,12 @@ public static class Rooms
             {
                 case 0://Menu
                     if (!GameFunctions.Menu())
-                        {
-                            return false;
-                        }
-                break;
+                    {
+                        return false;
+                    }
+                    break;
                 case 1://Roots
-                GameFunctions.Dialogue(RoomTwo.Roots);
+                    GameFunctions.Dialogue(RoomTwo.Roots);
                     if (GameFunctions.CheckOption(GameOptions.ClimbRoots) == 0)
                     {
                         if (!Characters.player.Inventory.Contains(Items.FieryGemstone))
@@ -169,27 +169,27 @@ public static class Rooms
                         {
                             GameFunctions.Dialogue(RoomTwo.AlreadyClimbed);
                         }
-                        
+
                     }
-                break;
+                    break;
                 case 2://Red Door
-                GameFunctions.Dialogue(RoomTwo.RedDoor);
-                if (GameFunctions.CheckOption(GameOptions.TryRed )== 0)
-                {
-                    GameFunctions.Dialogue(RoomTwo.TryRed);
-                }
-                if (Characters.player.Inventory.Contains(Items.FieryGemstone))
-                {
-                    int nA = GameFunctions.CheckOption(GameOptions.TryGemstone);
-                    GameFunctions.Dialogue(RoomTwo.RedSerpent);
-                    Characters.player.Use(Items.FieryGemstone);
-                    nA=GameFunctions.CheckOption(GameOptions.RedHandle);
-                    GameFunctions.Dialogue(RoomTwo.RedHandle);
-                    nA=GameFunctions.CheckOption(GameOptions.ThroughRed);
-                    GameFunctions.Dialogue(RoomTwo.LeaveGreen);
-                    return true;
-                }
-                break;
+                    GameFunctions.Dialogue(RoomTwo.RedDoor);
+                    if (GameFunctions.CheckOption(GameOptions.TryRed) == 0)
+                    {
+                        GameFunctions.Dialogue(RoomTwo.TryRed);
+                    }
+                    if (Characters.player.Inventory.Contains(Items.FieryGemstone))
+                    {
+                        int nA = GameFunctions.CheckOption(GameOptions.TryGemstone);
+                        GameFunctions.Dialogue(RoomTwo.RedSerpent);
+                        Characters.player.Use(Items.FieryGemstone);
+                        nA = GameFunctions.CheckOption(GameOptions.RedHandle);
+                        GameFunctions.Dialogue(RoomTwo.RedHandle);
+                        nA = GameFunctions.CheckOption(GameOptions.ThroughRed);
+                        GameFunctions.Dialogue(RoomTwo.LeaveGreen);
+                        return true;
+                    }
+                    break;
             }
         }
         return true;
@@ -203,33 +203,33 @@ public static class Rooms
             switch (GameFunctions.CheckOption(GameOptions.RoomThreeNav))
             {
                 case 0://Menu
-                if (!GameFunctions.Menu())
+                    if (!GameFunctions.Menu())
                     {
                         return false;
                     }
-                break;
+                    break;
                 case 1://Chasm
-                GameFunctions.Dialogue(RoomThree.InvestigateChasm);
+                    GameFunctions.Dialogue(RoomThree.InvestigateChasm);
                     if (GameFunctions.CheckOption(GameOptions.TryCross) == 0)
                     {
                         GameFunctions.Dialogue(RoomThree.TryWall);
                         //Add the scroll discovery here somehow
                     }
-                break;
+                    break;
                 case 2://Crystals
-                GameFunctions.Dialogue(RoomThree.InvestigateCrystals);
-                int nA = GameFunctions.CheckOption(GameOptions.Jump);
-                GameFunctions.Dialogue(RoomThree.JumpForCrystals);
-                nA = GameFunctions.CheckOption(GameOptions.TryMagic);
-                GameFunctions.Dialogue(RoomThree.WhichCrystal);
-                nA = GameFunctions.CheckOption(GameOptions.FirstCrystal);
-                GameFunctions.Dialogue(RoomThree.AttackFirstCrystal);
+                    GameFunctions.Dialogue(RoomThree.InvestigateCrystals);
+                    int nA = GameFunctions.CheckOption(GameOptions.Jump);
+                    GameFunctions.Dialogue(RoomThree.JumpForCrystals);
+                    nA = GameFunctions.CheckOption(GameOptions.TryMagic);
+                    GameFunctions.Dialogue(RoomThree.WhichCrystal);
+                    nA = GameFunctions.CheckOption(GameOptions.FirstCrystal);
+                    GameFunctions.Dialogue(RoomThree.AttackFirstCrystal);
                     if (GameFunctions.CheckOption(GameOptions.CrystalPuzzle) == 0)
                     {
                         Puzzles.CrystalPuzzle();
-                        navigation=false;
+                        navigation = false;
                     }
-                break;
+                    break;
             }
         }
         int na = GameFunctions.CheckOption(GameOptions.Jump);
@@ -248,20 +248,20 @@ public static class Rooms
         na = GameFunctions.CheckOption(GameOptions.TakeKey);
         GameFunctions.Dialogue(RoomThree.BlackKey);
         Characters.player.PickUp(Items.PlainBlackKey);
-        
-        bool running=false;
+
+        bool running = false;
         while (!running)
         {
             if (GameFunctions.CheckOption(GameOptions.Run) == 0)
             {
                 if (!GameFunctions.Menu())
-                    {
-                        return false;
-                    }
+                {
+                    return false;
+                }
             }
             else
             {
-                running=true;
+                running = true;
             }
         }
         GameFunctions.Dialogue(RoomThree.RunToDoor);
@@ -273,7 +273,7 @@ public static class Rooms
     public static bool Corridor()
     {
         GameFunctions.Dialogue(ForeverCorridor.EnterCorridor);
-        for(int i = 0; i < 2; i++)
+        for (int i = 0; i < 2; i++)
         {
             if (GameFunctions.CheckOption(GameOptions.TryTwistedDoor) == 0)
             {
@@ -290,7 +290,7 @@ public static class Rooms
         GameFunctions.Dialogue(ForeverCorridor.WispConvo);
         GameFunctions.CheckOption(GameOptions.OpenPack);
         GameFunctions.Dialogue(ForeverCorridor.LookInBag);
-        foreach(Item item in Characters.player.Inventory)
+        foreach (Item item in Characters.player.Inventory)
         {
             if (item.Name.Contains("Twisted"))
             {
@@ -300,11 +300,11 @@ public static class Rooms
             {
                 Console.WriteLine($"{item.Name}{Environment.NewLine}");
             }
-            
+
         }
         GameFunctions.CheckOption(GameOptions.TakeShards);
         GameFunctions.Dialogue(ForeverCorridor.TwistedMetalForge);
-        foreach(string line in ForeverCorridor.Forging)
+        foreach (string line in ForeverCorridor.Forging)
         {
             GameFunctions.CheckOption(GameOptions.HoldTighter);
             Console.WriteLine(line);
@@ -325,40 +325,68 @@ public static class Rooms
             switch (GameFunctions.CheckOption(GameOptions.WitherNav))
             {
                 case 0://Grate
-                GameFunctions.Dialogue(WitheringShadeChamber.Grate);
-                haveLookedAround[0]=true;
-                break;
+                    GameFunctions.Dialogue(WitheringShadeChamber.Grate);
+                    haveLookedAround[0] = true;
+                    break;
                 case 1://Hole
-                GameFunctions.Dialogue(WitheringShadeChamber.CeilingHole);
-                haveLookedAround[0]=true;
-                break;
+                    GameFunctions.Dialogue(WitheringShadeChamber.CeilingHole);
+                    haveLookedAround[0] = true;
+                    break;
                 case 2://shelf
                     if (!haveLookedAround[0] || !haveLookedAround[1])
                     {
                         GameFunctions.Dialogue(WitheringShadeChamber.DoubleChk);
-                        if (GameFunctions.CheckOption(GameOptions.DoubleCheck) == 1)
-                        {
-                            GameFunctions.Dialogue(WitheringShadeChamber.Shelf);
-                            GameFunctions.CheckOption(GameOptions.LastScroll);
-                            GameFunctions.Dialogue(Scrolls.Five);
-                            Console.WriteLine($"SCROLLS: {Characters.player.Scrolls} out of 5 collected!");
-                            GameFunctions.Dialogue(WitheringShadeChamber.AfterScroll);
-                            GameFunctions.CheckOption(GameOptions.Turn);
-                            //HERE WE GO BABEY!
-                            GameFunctions.Dialogue(WitheringShadeChamber.TheWitheringShade);
-
-                            //here is shelf
-                            navigation=false;
-                        }
                     }
-                break;
+                    else
+                    {
+                        navigation=false;
+                    }
+                    break;
+            }
+            GameFunctions.Dialogue(WitheringShadeChamber.Shelf);
+            GameFunctions.CheckOption(GameOptions.LastScroll);
+            GameFunctions.Dialogue(Scrolls.Five);
+            Console.WriteLine($"SCROLLS: {Characters.player.Scrolls} out of 5 collected!");
+            GameFunctions.Dialogue(WitheringShadeChamber.AfterScroll);
+            GameFunctions.CheckOption(GameOptions.Turn);
+            //HERE WE GO BABEY!
+            GameFunctions.Dialogue(WitheringShadeChamber.TheWitheringShade);
+            GameFunctions.CheckOption(GameOptions.Fight);
+            if (Combat.Start(Characters.player, Characters.witheringShade))
+            {
+                //final fight sequence
+                GameFunctions.Dialogue(WitheringShadeChamber.AlmostDead);
+                GameFunctions.CheckOption(GameOptions.Fire);
+                GameFunctions.Dialogue(WitheringShadeChamber.FireFumes);
+                GameFunctions.CheckOption(GameOptions.Shoot);
+                GameFunctions.Dialogue(WitheringShadeChamber.ArrowRock);
+                GameFunctions.CheckOption(GameOptions.Finish);
+                GameFunctions.Dialogue(WitheringShadeChamber.BattleWin);
+                GameFunctions.CheckOption(GameOptions.FinalScroll);
+                GameFunctions.Dialogue(Scrolls.WitherWisp);
+                GameFunctions.CheckOption(GameOptions.Leave);
+                GameFunctions.Dialogue(WitheringShadeChamber.EndingFork);
+                if (GameFunctions.CheckOption(GameOptions.FinalFork) == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    GameFunctions.Dialogue(WitheringShadeChamber.TheTashKar);
+                    return true;
+                }
+
+            }
+            else
+            {
+                //you died
+                Console.WriteLine("You died. Better luck next time!");
+                return false;
             }
         }
-        // Combat.Start();
-        //here call combat
-        return false;//change when decide post game
+        return true;//change when decide post game
     }
-    public static bool DemoMode()
+    public static void DemoMode()
     {
         Characters.player.Learn(Spells.DragonsBreath);
         Characters.player.Learn(Spells.EnergyBlast);
@@ -367,17 +395,26 @@ public static class Rooms
         Characters.player.PickUp(Items.DraughtVitality);
         Characters.player.PickUp(Items.TwistedBlackShardOne);
         Console.ReadLine();
+        Console.WriteLine("Welcome to the 'Withering Dungeon' Demo");
+        Console.WriteLine("Press ENTER to continue..");
+
+        // Console.ReadLine();
+        Console.ReadLine();
         Console.WriteLine("Greetings adventurer! Prey tell, what is your name?");
         Characters.player.NameAssign(Console.ReadLine()!);
-        Characters.player.Mana+=10;
-        GameOptions.MenuOptions[2]="2. SpellBook";
-        if (!GameFunctions.Menu())
-        {
-            return false;
-        }
+        Console.WriteLine("And, how strong are you?");
+        Console.ReadLine();
+        Characters.player.StatAssign(Console.In);
+        Console.ReadLine();
+        Console.WriteLine("0. Open The Menu");
+        Console.ReadLine();
+        Characters.player.Mana += 10;
+        GameOptions.MenuOptions[2] = "2. SpellBook";
+
+        GameFunctions.Menu();
+        Console.ReadLine();
         GameFunctions.Dialogue(Demo.Crystals);
         Puzzles.CrystalPuzzle();
-        return false;
-       
+        Console.WriteLine("You have completed the demo. Thank you for playing!!");
     }
 }

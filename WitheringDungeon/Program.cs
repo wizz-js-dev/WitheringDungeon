@@ -3,9 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        
-        // Rooms.DemoMode();
-        Combat.Start(Characters.player,Characters.witheringShade);
+        //When project done, remove the dev cheat options in the puzzles 
         //Gets player data and assigns to character object
         Console.WriteLine("Greetings adventurer! Prey tell, what is your name?");
         Characters.player.NameAssign(Console.ReadLine()!);
@@ -36,7 +34,12 @@ class Program
                 if(gamePlay){gamePlay=Rooms.Two();}
                 if(gamePlay){gamePlay=Rooms.Three();}
                 if(gamePlay){gamePlay=Rooms.Corridor();}
-                //if(gamePlay){gamePlay=Rooms.WitheringDungeon();}
+                if(gamePlay){gamePlay=Rooms.Final();}
+                if (gamePlay)
+                {
+                    GameFunctions.Dialogue(EndSequence.Thanks);
+                    gamePlay=false;
+                }
             }
         }
         

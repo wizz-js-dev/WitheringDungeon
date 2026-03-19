@@ -80,6 +80,9 @@ public static class GameFunctions
     public static bool Menu()
     {
         bool inMenu = true;
+        Console.WriteLine("______");
+        Console.WriteLine("MENU");
+        Console.WriteLine("------");
         while (inMenu)
         {
             switch (GameFunctions.CheckOption(GameOptions.MenuOptions))
@@ -144,5 +147,10 @@ public static class GameFunctions
         turn[0]=turn[1];
         turn[1]=temp;
         return turn;
+    }
+    public static int D20Roll()
+    {
+        Random rnd = new Random();
+        return rnd.Next(1,20);
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WitheringDungeon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd8d1e4544f0df44ac075fef7a79548694709082")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b70bb10bacd304e16a6fb7f7904af5deef16df45")]
 [assembly: System.Reflection.AssemblyProductAttribute("WitheringDungeon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WitheringDungeon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

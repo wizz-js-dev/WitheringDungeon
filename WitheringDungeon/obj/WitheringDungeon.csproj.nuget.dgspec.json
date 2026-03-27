@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programming\\Bootcamp\\week_6\\day_4\\RPGConsoleApp\\WitheringDungeon\\WitheringDungeon.csproj": {}
+    "/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/RPGConsoleApp/WitheringDungeon/WitheringDungeon.csproj": {}
   },
   "projects": {
-    "E:\\Programming\\Bootcamp\\week_6\\day_4\\RPGConsoleApp\\WitheringDungeon\\WitheringDungeon.csproj": {
+    "/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/RPGConsoleApp/WitheringDungeon/WitheringDungeon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\Bootcamp\\week_6\\day_4\\RPGConsoleApp\\WitheringDungeon\\WitheringDungeon.csproj",
+        "projectUniqueName": "/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/RPGConsoleApp/WitheringDungeon/WitheringDungeon.csproj",
         "projectName": "WitheringDungeon",
-        "projectPath": "E:\\Programming\\Bootcamp\\week_6\\day_4\\RPGConsoleApp\\WitheringDungeon\\WitheringDungeon.csproj",
-        "packagesPath": "C:\\Users\\eliza\\.nuget\\packages\\",
-        "outputPath": "E:\\Programming\\Bootcamp\\week_6\\day_4\\RPGConsoleApp\\WitheringDungeon\\obj\\",
+        "projectPath": "/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/RPGConsoleApp/WitheringDungeon/WitheringDungeon.csproj",
+        "packagesPath": "/home/strangewise/.nuget/packages/",
+        "outputPath": "/media/strangewise/Strange HD/Programming/Bootcamp/week_6/day_4/RPGConsoleApp/WitheringDungeon/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eliza\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/strangewise/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
